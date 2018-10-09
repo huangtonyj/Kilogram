@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  skip_before_action :verify_authenticity_token
 
   helper_method :current_user, :signed_in?
 
@@ -25,7 +26,7 @@ class ApplicationController < ActionController::Base
 
   def require_logged_in
     unless current_user
-      render json { base: ['valid credentials']}, status: 401
+      render json: { base: ['valid credentials']}, status: 401
     end
   end
 

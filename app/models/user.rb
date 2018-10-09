@@ -46,7 +46,7 @@ class User < ApplicationRecord
   private
 
   def ensure_session_token
-    self.session_token = generate_unique_session_token
+    self.session_token ||= generate_unique_session_token
   end
 
   def generate_unique_session_token
