@@ -9,9 +9,31 @@ import App from './components/app.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const store = configureStore();
+  // front end auth
+  let store;
+  if (window.currentUser) {
+    const { currentUser } = window;
+    const { id } = currentUser;
+    const preloadedState = {
+      entities: {
+        users: {
+          [id]: currentUser
+        }
+      },
+      session: { id }
+    };
+    store = configureStore(preloadedState);
+
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+
+
+  // DELETE LATER!!!!
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  // DELETE LATER!!!!
 
 
 
