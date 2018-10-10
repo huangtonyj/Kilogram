@@ -3,11 +3,15 @@ import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 
 import SessionContainer from './session/session_container.jsx';
+import GreetingContainer from './greeting/greeting_container.js';
 
 const App = () => (
   <div>
     <header>
-      <h1>Kilogrammmm..............</h1>
+      <Link to="/" className="header-link">
+        <h1>Kiloooogrammm</h1>
+      </Link>
+      <GreetingContainer />
     </header>
     <Switch>
       <AuthRoute exact path='/signin' component={SessionContainer} />
