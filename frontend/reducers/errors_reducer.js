@@ -10,9 +10,12 @@ const errorsReducer = (state = {}, action) => {
   switch (action.type) {
 
     case SESSION_ERROR:
-      let sessionErrors = state.errors.session;
-      sessionErrors.push(action.error);
-      newState.session = sessionErrors;
+      // let sessionErrors = state.errors.session;
+      // sessionErrors.push(action.error);
+      // newState.errors.session = sessionErrors;
+      newState = {
+        session: action.error
+      };
       return newState;
 
     case SESSION_POST:
