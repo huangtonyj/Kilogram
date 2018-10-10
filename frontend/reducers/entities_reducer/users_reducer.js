@@ -4,7 +4,7 @@ import {
 } from '../../actions/user_actions.js';
 import {
   SESSION_POST
-} from '../../actions/user_actions.js';
+} from '../../actions/session_actions.js';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state)
