@@ -7,7 +7,9 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      email: '',
+      description: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,7 +23,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.signIn(user);
+    this.props.signUp(user);
   }
 
   renderErrors() {
@@ -44,17 +46,17 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signin-form-box">
           Welcome to Kilogram!
           <br />
-          Please Sign In or <Link to='/signup'>Sign Up</Link>
+          Please <Link to='/signin'>Sign In</Link> or Sign Up
 
           {this.renderErrors()}
 
-          <div className="signin-form">
+          <div className="signup-form">
             <br />
             <label>Username:
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="signin-input"
+                className="signup-input"
               />
             </label>
 
@@ -64,14 +66,34 @@ class SessionForm extends React.Component {
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signin-input"
+                className="signup-input"
+              />
+            </label>
+
+            <br />
+
+            <label>Email:
+              <input type="email"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="signup-input"
+              />
+            </label>
+
+            <br />
+
+            <label>Description:
+              <textarea
+                value={this.state.description}
+                onChange={this.update('description')}
+                className="signup-input"
               />
             </label>
 
             <br />
 
             <input type="submit"
-              value="Sign In"
+              value="Sign Up"
               className="session-submit" />
           </div>
         </form>
