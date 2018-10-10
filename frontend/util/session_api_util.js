@@ -1,4 +1,4 @@
-export const ajaxSignIn = (user) => (
+export const ajaxSessionPost = (user) => (
   $.ajax({
     method: 'POST',
     url: 'api/session',
@@ -6,7 +6,7 @@ export const ajaxSignIn = (user) => (
   })
 );
 
-export const ajaxSignOut = () => (
+export const ajaxSessionDelete = () => (
   $.ajax({
     method: 'DELETE',
     url: 'api/session'
