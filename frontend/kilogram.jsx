@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
           [id]: currentUser
         }
       },
-      session: { id }
+      session: { id },
+      errors: {
+        session: { id }
+      }
     };
     store = configureStore(preloadedState);
 

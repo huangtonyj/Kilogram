@@ -1,12 +1,17 @@
 import React from 'react';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
-// import GreetingContainer from './greeting_container.jsx';
+import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
+
+import SessionContainer from './session/session_container.jsx';
 
 const App = () => (
   <div>
-    <h1>Hellooooooo there!, Welcome to Kilogram</h1>
-    <h2>This is app.jsx</h2>
-
+    <header>
+      <h1>Kilogrammmm..............</h1>
+    </header>
+    <Switch>
+      <AuthRoute exact path='/signin' component={SessionContainer} />
+    </Switch>
   </div>
 );
 

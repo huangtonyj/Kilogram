@@ -13,7 +13,7 @@ const sessionReducer = (state = _nullUser, action) => {
   switch (action.type) {
     case SESSION_POST:
       return {
-        currentUserId: action.user.id
+        id: action.user.id
       };
 
     case SESSION_DELETE:
