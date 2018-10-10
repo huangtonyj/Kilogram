@@ -42,9 +42,6 @@ class SessionForm extends React.Component {
     return (
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form-box">
-          Welcome to Kilogram!
-          <br />
-          Please Sign In or <Link to='/signup'>Sign Up</Link>
 
           {this.renderErrors()}
 

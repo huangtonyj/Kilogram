@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, signOut }) => {
   const signedOutGreeting = () => (
     <nav className="signin-signup">
-      <ul>
-        <li><Link to="/signin">Sign in!</Link></li>
-        <li><Link to="/signup">Sign up!</Link></li>
-      </ul>
+      Welcome to Kilogram!
+          <br />
+      Please <Link to='/signin'>Sign In</Link> or <Link to='/signup'>Sign Up</Link>
     </nav>
   );
 

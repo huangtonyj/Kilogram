@@ -2,6 +2,9 @@ import {
   SESSION_ERROR,
   SESSION_POST,
 } from '../actions/session_actions.js';
+import {
+  USER_POST,
+} from '../actions/user_actions.js';
 
 const errorsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -19,6 +22,7 @@ const errorsReducer = (state = {}, action) => {
       return newState;
 
     case SESSION_POST:
+    case USER_POST:
       newState.session = [];
       return newState;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class UserForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,9 +44,7 @@ class SessionForm extends React.Component {
     return (
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form-box">
-          Welcome to Kilogram!
-          <br />
-          Please <Link to='/signin'>Sign In</Link> or Sign Up
+
 
           {this.renderErrors()}
 
@@ -102,4 +100,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default UserForm;
