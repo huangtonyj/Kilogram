@@ -13,7 +13,7 @@
 class Post < ApplicationRecord
 
   validates :author_id, presence: true
-  # validate :ensure_photo
+  validate :ensure_photo
 
   has_one_attached :photo
 

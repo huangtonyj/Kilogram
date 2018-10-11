@@ -38,7 +38,27 @@ class PostForm extends React.Component {
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
     }
-    this.props.postPosts(formData);
+    this.props.postPosts(formData).then(() => (
+      this.setState = {
+        caption: "",
+        photoFile: null,
+        photoUrl: null
+      })
+    );
+  }
+
+  renderErrors() {
+    if (this.props.errors) {
+      return (
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   render() {
@@ -64,8 +84,10 @@ class PostForm extends React.Component {
         </div>
 
         <button> Submit Post</button >
+        {this.renderErrors()}
       </form >
     );
+
   }
 
 }

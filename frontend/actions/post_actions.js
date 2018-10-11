@@ -3,8 +3,9 @@ import * as PostAPIUtil from '../util/post_api_util';
 export const POSTS_GET = 'POSTS_GET';
 export const POST_GET = 'POST_GET';
 export const POST_POST = 'POST_POST';
+export const POST_ERROR = 'POST_ERROR';
 
-
+// action actions
 export const postsGet = (posts) => ({
   type: POSTS_GET,
   posts
@@ -20,8 +21,13 @@ export const postPost = (post) => ({
   post
 });
 
+export const postError = (error) => ({
+  type: POST_ERROR,
+  error
+});
 
 
+// ajax actions
 export const ajaxPostsGet = () => dispatch => (
   PostAPIUtil.ajaxPostsGet().then(
     (posts) => dispatch(postsGet(posts))
@@ -36,6 +42,7 @@ export const ajaxPostGet = (id) => dispatch => (
 
 export const ajaxPostPost = (post) => dispatch => (
   PostAPIUtil.ajaxPostPost(post).then(
-    (post) => dispatch(postPost(post))
+    (post) => dispatch(postPost(post)),
+    (error) => dispatch(postError(error.responseJSON))
   )
 );

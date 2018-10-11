@@ -6,6 +6,10 @@ import {
 import {
   USER_POST,
 } from '../actions/user_actions.js';
+import {
+  POST_ERROR,
+  POST_POST
+} from '../actions/post_actions';
 
 const errorsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -13,10 +17,8 @@ const errorsReducer = (state = {}, action) => {
 
   switch (action.type) {
 
+    // errors for session/user
     case SESSION_ERROR:
-      // let sessionErrors = state.errors.session;
-      // sessionErrors.push(action.error);
-      // newState.errors.session = sessionErrors;
       newState = {
         session: action.error
       };
@@ -26,8 +28,18 @@ const errorsReducer = (state = {}, action) => {
     case SESSION_DELETE:
     case USER_POST:
       newState.session = [];
+      newState.post = [];
       return newState;
 
+      // errors for posts
+    case POST_ERROR:
+      Object.assign(newState, {
+        post: action.error
+      });
+      return newState;
+    case POST_POST:
+      newState.post = [];
+      return newState;
     default:
       return state;
 
