@@ -20,3 +20,8 @@ User.create!(
   password: 'starwars',
   description: 'Welcome to the Kilogram demo'
 )
+
+Post.create!(
+  author_id: 1,
+  caption: "SF Golden Gate Bridge"
+)
