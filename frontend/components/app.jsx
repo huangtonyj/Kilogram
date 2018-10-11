@@ -22,10 +22,9 @@ const App = () => (
     <Switch>
       <AuthRoute exact path='/signin' component={SessionContainer} />
       <AuthRoute exact path='/signup' component={UserFormContainer} />
-      {/* <ProtectedRoute exact path='/' /> */}
+      <ProtectedRoute exact path='/' component={PostIndex} />
     </Switch>
 
-    <PostIndex />
 
   </div>
 );

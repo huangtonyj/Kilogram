@@ -9,10 +9,9 @@ const usersReducer = (state = {}, action) => {
 
   switch (action.type) {
     case POSTS_GET:
-      // return newState.push(action.posts);
-      return action.posts;
+      return Object.assign(newState, action.posts);
     case POST_GET:
-      return newState.push(action.post);
+      return Object.assign(newState, action.post);
     default:
       return state;
   }
