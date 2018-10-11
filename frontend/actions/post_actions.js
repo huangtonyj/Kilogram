@@ -26,6 +26,3 @@ export const ajaxPostGet = (id) => dispatch => (
     (post) => dispatch(postGet(post))
   )
 );
-
-window.ajaxPostsGet = ajaxPostsGet;
-window.ajaxPostGet = ajaxPostGet;

@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // DELETE LATER!!!!
-  window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // DELETE LATER!!!!

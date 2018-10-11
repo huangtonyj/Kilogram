@@ -1,6 +1,7 @@
 import {
   SESSION_ERROR,
   SESSION_POST,
+  SESSION_DELETE
 } from '../actions/session_actions.js';
 import {
   USER_POST,
@@ -22,6 +23,7 @@ const errorsReducer = (state = {}, action) => {
       return newState;
 
     case SESSION_POST:
+    case SESSION_DELETE:
     case USER_POST:
       newState.session = [];
       return newState;

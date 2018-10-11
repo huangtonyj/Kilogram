@@ -12,5 +12,9 @@ export const ajaxPostGet = (id) => (
   })
 );
 
-// window.ajaxPostsGet = ajaxPostsGet;
-// window.ajaxPostGet = ajaxPostGet;
+export const ajaxPostPost = (post) => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/posts'
+  })
+);
