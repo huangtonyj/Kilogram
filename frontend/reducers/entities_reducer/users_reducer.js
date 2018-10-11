@@ -7,7 +7,7 @@ import {
 } from '../../actions/session_actions.js';
 
 const usersReducer = (state = {}, action) => {
-  Object.freeze(state)
+  Object.freeze(state);
   let newState = Object.assign({}, state);
 
   switch (action.type) {

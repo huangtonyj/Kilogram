@@ -7,7 +7,7 @@
 #  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
-#  description     :text             not null
+#  description     :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
@@ -19,6 +19,10 @@ class User < ApplicationRecord
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :username, :email, :session_token, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
+
+  has_many :posts,
+    foreign_key: :author_id,
+    class_name: :Post
 
   after_initialize :ensure_session_token
 

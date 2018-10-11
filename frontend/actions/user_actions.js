@@ -21,8 +21,8 @@ export const ajaxUserPost = (user) => dispatch => (
   )
 );
 
-export const ajaxUserGet = (user) => dispatch => (
-  UserAPIUtil.ajaxUserGet(user).then(
+export const ajaxUserGet = (id) => dispatch => (
+  UserAPIUtil.ajaxUserGet(id).then(
     (user) => dispatch(userGet(user))
   )
 );

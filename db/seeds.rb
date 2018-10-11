@@ -25,3 +25,8 @@ Post.create!(
   author_id: 1,
   caption: "SF Golden Gate Bridge"
 )
+
+Post.create!(
+  author_id: 2,
+  caption: "Boston"
+)
