@@ -15,6 +15,9 @@ export const ajaxPostGet = (id) => (
 export const ajaxPostPost = (post) => (
   $.ajax({
     method: 'POST',
-    url: 'api/posts'
+    url: 'api/posts',
+    data: post,
+    contentType: false,
+    processData: false
   })
 );

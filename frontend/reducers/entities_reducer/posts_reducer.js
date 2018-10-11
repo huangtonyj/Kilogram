@@ -1,6 +1,7 @@
 import {
   POSTS_GET,
-  POST_GET
+  POST_GET,
+  POST_POST
 } from '../../actions/post_actions';
 
 const usersReducer = (state = {}, action) => {
@@ -11,6 +12,7 @@ const usersReducer = (state = {}, action) => {
     case POSTS_GET:
       return Object.assign(newState, action.posts);
     case POST_GET:
+    case POST_POST:
       return Object.assign(newState, action.post);
     default:
       return state;

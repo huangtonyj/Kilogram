@@ -8,8 +8,7 @@ const mapStateToProps = ({ entities: { posts } }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getPosts: () => dispatch(ajaxPostsGet()),
-  // getPost: (id) => dispatch(ajaxPostsGet(id))
+  getPosts: () => dispatch(ajaxPostsGet())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostIndex);

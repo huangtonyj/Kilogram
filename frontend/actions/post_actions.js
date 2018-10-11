@@ -2,6 +2,7 @@ import * as PostAPIUtil from '../util/post_api_util';
 
 export const POSTS_GET = 'POSTS_GET';
 export const POST_GET = 'POST_GET';
+export const POST_POST = 'POST_POST';
 
 
 export const postsGet = (posts) => ({
@@ -14,6 +15,12 @@ export const postGet = (post) => ({
   post
 });
 
+export const postPost = (post) => ({
+  type: POST_POST,
+  post
+});
+
+
 
 export const ajaxPostsGet = () => dispatch => (
   PostAPIUtil.ajaxPostsGet().then(
@@ -22,7 +29,13 @@ export const ajaxPostsGet = () => dispatch => (
 );
 
 export const ajaxPostGet = (id) => dispatch => (
-  PostAPIUtil.ajaxPostsGet(id).then(
+  PostAPIUtil.ajaxPostGet(id).then(
     (post) => dispatch(postGet(post))
+  )
+);
+
+export const ajaxPostPost = (post) => dispatch => (
+  PostAPIUtil.ajaxPostPost(post).then(
+    (post) => dispatch(postPost(post))
   )
 );
