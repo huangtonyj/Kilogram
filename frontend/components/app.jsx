@@ -9,6 +9,19 @@ import UserShow from './user/user_show_container';
 import PostForm from './post/post_form_container';
 import PostIndex from './post/post_index_container';
 
+
+import { ajaxFollowPost, ajaxFollowDelete } from '../util/follow_api_util';
+window.ajaxFollowPost = ajaxFollowPost;
+window.ajaxFollowDelete = ajaxFollowDelete;
+
+
+
+
+
+
+
+
+
 const App = () => (
   <div>
 
