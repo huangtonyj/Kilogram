@@ -14,7 +14,7 @@ const App = () => (
 
     <header>
       <Link to="/" className="header-link">
-        <h1>Kiloooogrammm</h1>
+        <h1> 📷 ⭐ Kilogram ⭐ 📷 </h1>
       </Link>
 
       <GreetingContainer />
