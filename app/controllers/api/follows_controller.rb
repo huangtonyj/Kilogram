@@ -1,6 +1,7 @@
 class Api::FollowsController < ApplicationController
 
   def create
+    
     @follow = current_user.followee.find_by(followee: follow_params[:followee_id].to_i) || nil
     
     if @follow

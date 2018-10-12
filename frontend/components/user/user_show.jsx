@@ -8,6 +8,7 @@ class UserShow extends React.Component {
     this.state = {
       user: null
     };
+    this.handleFollow = this.handleFollow.bind(this);
   }
 
   componentDidMount() {
@@ -20,6 +21,10 @@ class UserShow extends React.Component {
     }
   }
 
+  handleFollow() {
+    this.props.toggleFollow(this.props.match.params.userId);
+  }
+
   render() {
 
     if (!this.props.user) { return null; }
@@ -27,6 +32,12 @@ class UserShow extends React.Component {
     return (
       <div>
         <h1>{this.props.user.username}</h1>
+
+        <button
+          onClick={this.handleFollow}>
+          {'Follow Toggle'}
+        </button>
+
         <p>{this.props.user.description}</p>
 
         <UserShowPostIndex

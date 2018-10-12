@@ -1,7 +1,9 @@
-export const ajaxFollowPostToggle = (follow) => (
+export const ajaxFollowPostToggle = (followee_id) => (
   $.ajax({
     method: 'POST',
     url: 'api/follows',
-    data: follow
+    data: {
+      followee_id: followee_id
+    }
   })
 );
