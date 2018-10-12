@@ -11,13 +11,16 @@ class UserShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getUser(this.props.userId);
-    console.log(this.props);
+    this.props.getUser(this.props.match.params.userId);
   }
 
   render() {
+    console.log(this.props);
     return (
-      <h1> this is user show</h1>
+      <div>
+        <h1> this is user show</h1>
+        {/* <p>{this.props.users[this.props.match.params.userId].username}</p> */}
+      </div>
     )
   }
 }
