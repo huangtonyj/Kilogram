@@ -3,10 +3,18 @@ import { connect } from 'react-redux';
 import { ajaxUserGet } from '../../actions/user_actions';
 import UserShow from './user_show';
 
-const mapStateToProps = (state, ownProps) => ({
-  user: state.entities.users[ownProps.match.params.userId] || undefined,
-  posts: Object.keys(state.entities.posts).map((postId) => state.entities.posts[postId])
-});
+const mapStateToProps = (state, ownProps) => {
+
+  const userId = ownProps.match.params.userId;
+  const allPosts = state.entities.posts;
+
+  return ({
+    user: state.entities.users[userId] || undefined,
+    posts: Object.keys(allPosts)
+      .map((postId) => allPosts[postId])
+      .filter((post) => post.authorId === parseInt(userId))
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   getUser: (id) => dispatch(ajaxUserGet(id))

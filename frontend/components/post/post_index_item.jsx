@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PostIndexItem = ({ post, author }) => (
   <li>
     <div className="post-index-item">
-      <p>{author.username}</p>
+      <div>
+        <Link to={`/users/${author.id}`}>{author.username}</Link>
+      </div>
+
       <img
         className="post-index-item-image"
         src={post.photoUrl}
@@ -11,7 +15,7 @@ const PostIndexItem = ({ post, author }) => (
       />
       <p>{post.caption}</p>
     </div>
-  </li>
+  </li >
 );
 
 export default PostIndexItem;

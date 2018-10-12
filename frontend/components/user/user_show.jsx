@@ -33,7 +33,7 @@ class UserShow extends React.Component {
           posts={this.props.posts} />
 
       </div>
-    )
+    );
   }
 }
 
