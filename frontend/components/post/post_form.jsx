@@ -43,12 +43,13 @@ class PostForm extends React.Component {
 
     this.props.postPosts(formData).then(console.log("You posted it!"))
       .then(() => (
-        this.setState = {
+        this.setState({
           caption: "",
           photoFile: null,
           photoUrl: null
         })
-      );
+      ));
+
   }
 
   renderErrors() {
