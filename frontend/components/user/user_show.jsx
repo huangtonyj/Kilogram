@@ -1,5 +1,5 @@
 import React from 'react';
-// import PostIndexItem from './post_index_item';
+import UserShowPostIndex from './user_show_post_index';
 
 class UserShow extends React.Component {
 
@@ -14,17 +14,24 @@ class UserShow extends React.Component {
     this.props.getUser(this.props.match.params.userId);
   }
 
-  // componentWillReceiveProps
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.getUser(nextProps.match.params.userId);
+    }
+  }
 
   render() {
 
     if (!this.props.user) { return null; }
 
-    console.log(this.props);
     return (
       <div>
-        <h1> this is user show</h1>
-        <p>{this.props.user.username}</p>
+        <h1>{this.props.user.username}</h1>
+        <p>{this.props.user.description}</p>
+
+        <UserShowPostIndex
+          posts={this.props.posts} />
+
       </div>
     )
   }

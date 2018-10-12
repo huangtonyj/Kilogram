@@ -3,18 +3,13 @@ import { connect } from 'react-redux';
 import { ajaxUserGet } from '../../actions/user_actions';
 import UserShow from './user_show';
 
-// make mapStateToProps implicit return
-// define const userId
-// use selector to return a user or undefined
-
 const mapStateToProps = (state, ownProps) => ({
-
-  user: state.users[ownProps.match.params.userId] || undefined,
-  posts: state.posts
+  user: state.entities.users[ownProps.match.params.userId] || undefined,
+  posts: Object.keys(state.entities.posts).map((postId) => state.entities.posts[postId])
 });
 
 const mapDispatchToProps = dispatch => ({
-  getUser: (id) => dispatch(ajaxUserGet(id)),
+  getUser: (id) => dispatch(ajaxUserGet(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserShow);
