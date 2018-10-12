@@ -35,6 +35,22 @@ class User < ApplicationRecord
   has_many :liked_posts,
     through: :likes,
     source: :post
+
+  has_many :follower,
+    foreign_key: :followee_id,
+    class_name: :Follow
+  
+  has_many :followee,
+    foreign_key: :follower_id,
+    class_name: :Follow
+
+  has_many :followers,
+    through: :follower,
+    source: :follower
+  
+  has_many :followees,
+    through: :followee,
+    source: :followee
   
   
   # Auth
