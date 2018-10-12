@@ -8,8 +8,8 @@ import UserShow from './user_show';
 // use selector to return a user or undefined
 
 const mapStateToProps = (state, ownProps) => ({
-  userId:
-    user: state.users[ownProps.match.params.userId] || undefined,
+
+  user: state.users[ownProps.match.params.userId] || undefined,
   posts: state.posts
 });
 
