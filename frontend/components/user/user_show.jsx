@@ -12,11 +12,10 @@ class UserShow extends React.Component {
 
   componentDidMount() {
     this.props.getUser(this.props.userId);
-    this.setState({ loading: false });
+    console.log(this.props);
   }
 
   render() {
-    console.log(this.props)
     return (
       <h1> this is user show</h1>
     )

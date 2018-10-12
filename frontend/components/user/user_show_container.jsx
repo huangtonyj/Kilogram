@@ -5,7 +5,8 @@ import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => ({
   userId: ownProps.match.params.userId,
-  users: state.users
+  users: state.users,
+  posts: state.posts
 });
 
 const mapDispatchToProps = dispatch => ({

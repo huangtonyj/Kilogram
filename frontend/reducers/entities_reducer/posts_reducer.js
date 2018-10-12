@@ -3,6 +3,10 @@ import {
   POST_GET,
   POST_POST
 } from '../../actions/post_actions';
+import {
+  USER_POST,
+  USER_GET
+} from '../../actions/user_actions.js';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -10,6 +14,7 @@ const usersReducer = (state = {}, action) => {
 
   switch (action.type) {
     case POSTS_GET:
+    case USER_GET:
       return Object.assign(newState, action.payload.posts);
     case POST_GET:
     case POST_POST:

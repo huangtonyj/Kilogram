@@ -17,12 +17,12 @@ const usersReducer = (state = {}, action) => {
 
   switch (action.type) {
     case USER_POST:
-    case USER_GET:
     case SESSION_POST:
       return Object.assign(newState, {
         [action.user.id]: action.user
       });
-
+    case USER_GET:
+      return Object.assign(newState, action.payload.users);
     case POSTS_GET:
       return Object.assign(newState, action.payload.users);
 

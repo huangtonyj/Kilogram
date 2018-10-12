@@ -9,9 +9,9 @@ export const userPost = (user) => ({
   user
 });
 
-export const userGet = (user) => ({
+export const userGet = (payload) => ({
   type: USER_GET,
-  user
+  payload
 });
 
 
@@ -23,6 +23,6 @@ export const ajaxUserPost = (user) => dispatch => (
 
 export const ajaxUserGet = (id) => dispatch => (
   UserAPIUtil.ajaxUserGet(id).then(
-    (user) => dispatch(userGet(user))
+    (payload) => dispatch(userGet(payload))
   )
 );
