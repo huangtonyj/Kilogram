@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { ajaxPostsGet, ajaxPostGet } from '../../actions/post_actions';
 import PostIndex from './post_index';
 
-const mapStateToProps = ({ entities: { posts } }) => ({
-  posts: Object.keys(posts).map((postId) => posts[postId])
+const mapStateToProps = ({ entities: { posts, users } }) => ({
+  posts: Object.keys(posts).map((postId) => posts[postId]),
+  users: users
 });
 
 const mapDispatchToProps = dispatch => ({

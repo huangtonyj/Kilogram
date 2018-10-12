@@ -5,6 +5,11 @@ import {
 import {
   SESSION_POST
 } from '../../actions/session_actions.js';
+import {
+  POSTS_GET,
+  POST_GET,
+  POST_POST
+} from '../../actions/post_actions';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -17,6 +22,9 @@ const usersReducer = (state = {}, action) => {
       return Object.assign(newState, {
         [action.user.id]: action.user
       });
+
+    case POSTS_GET:
+      return Object.assign(newState, action.payload.users);
 
 
     default:

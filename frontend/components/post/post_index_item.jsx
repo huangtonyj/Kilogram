@@ -1,13 +1,13 @@
 import React from 'react';
 
-const PostIndexItem = ({ post }) => (
+const PostIndexItem = ({ post, author }) => (
   <li>
     <div className="post-index-item">
-      <p>{post.authorId}</p>
+      <p>{author.username}</p>
       <img
         className="post-index-item-image"
         src={post.photoUrl}
-        width="300px"
+        width="400px"
       />
       <p>{post.caption}</p>
     </div>

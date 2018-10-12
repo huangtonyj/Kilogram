@@ -6,14 +6,14 @@ export const POST_POST = 'POST_POST';
 export const POST_ERROR = 'POST_ERROR';
 
 // action actions
-export const postsGet = (posts) => ({
+export const postsGet = (payload) => ({
   type: POSTS_GET,
-  posts
+  payload
 });
 
-export const postGet = (post) => ({
+export const postGet = (payload) => ({
   type: POST_GET,
-  post
+  payload
 });
 
 export const postPost = (post) => ({
@@ -30,13 +30,13 @@ export const postError = (error) => ({
 // ajax actions
 export const ajaxPostsGet = () => dispatch => (
   PostAPIUtil.ajaxPostsGet().then(
-    (posts) => dispatch(postsGet(posts))
+    (payload) => dispatch(postsGet(payload))
   )
 );
 
 export const ajaxPostGet = (id) => dispatch => (
   PostAPIUtil.ajaxPostGet(id).then(
-    (post) => dispatch(postGet(post))
+    (payload) => dispatch(postGet(payload))
   )
 );
 
