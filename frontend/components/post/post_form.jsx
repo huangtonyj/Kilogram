@@ -33,18 +33,22 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     const formData = new FormData();
     formData.append('post[caption]', this.state.caption);
+    formData.append('post[author_id]', this.props.authorId);
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
     }
-    this.props.postPosts(formData).then(() => (
-      this.setState = {
-        caption: "",
-        photoFile: null,
-        photoUrl: null
-      })
-    );
+
+    this.props.postPosts(formData).then(console.log("You posted it!"))
+      .then(() => (
+        this.setState = {
+          caption: "",
+          photoFile: null,
+          photoUrl: null
+        })
+      );
   }
 
   renderErrors() {

@@ -13,7 +13,7 @@ const usersReducer = (state = {}, action) => {
       return Object.assign(newState, action.payload.posts);
     case POST_GET:
     case POST_POST:
-      return Object.assign(action.payload.post, newState);
+      return Object.assign(action.payload.posts, newState);
     default:
       return state;
   }

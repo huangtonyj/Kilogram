@@ -16,9 +16,9 @@ export const postGet = (payload) => ({
   payload
 });
 
-export const postPost = (post) => ({
+export const postPost = (payload) => ({
   type: POST_POST,
-  post
+  payload
 });
 
 export const postError = (error) => ({

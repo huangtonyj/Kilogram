@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { ajaxPostPost } from '../../actions/post_actions';
 import PostForm from './post_form';
 
-const mapStateToProps = ({ errors, entities: { posts } }) => ({
-  errors: errors.post
+const mapStateToProps = ({ session, errors, entities: { posts } }) => ({
+  errors: errors.post,
+  authorId: session.id
 });
 
 const mapDispatchToProps = dispatch => ({
