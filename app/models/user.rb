@@ -16,13 +16,28 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  # Validations
+
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :username, :email, :session_token, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
 
+  # Associations
+
   has_many :posts,
     foreign_key: :author_id,
     class_name: :Post
+
+  has_many :likes,
+    foreign_key: :user_id,
+    class_name: :Like
+
+  has_many :liked_posts,
+    through: :likes,
+    source: :post
+  
+  
+  # Auth
 
   after_initialize :ensure_session_token
 
