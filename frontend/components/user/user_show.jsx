@@ -14,12 +14,17 @@ class UserShow extends React.Component {
     this.props.getUser(this.props.match.params.userId);
   }
 
+  // componentWillReceiveProps
+
   render() {
+
+    if (!this.props.user) { return null; }
+
     console.log(this.props);
     return (
       <div>
         <h1> this is user show</h1>
-        {/* <p>{this.props.users[this.props.match.params.userId].username}</p> */}
+        <p>{this.props.user.username}</p>
       </div>
     )
   }

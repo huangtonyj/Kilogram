@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import { ajaxUserGet } from '../../actions/user_actions';
 import UserShow from './user_show';
 
+// make mapStateToProps implicit return
+// define const userId
+// use selector to return a user or undefined
+
 const mapStateToProps = (state, ownProps) => ({
-  users: state.users,
+  userId:
+    user: state.users[ownProps.match.params.userId] || undefined,
   posts: state.posts
 });
 
