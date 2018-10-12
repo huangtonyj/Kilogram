@@ -1,7 +1,7 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = current_user.followees.map { |followee| followee.posts }.flatten
     render "api/posts/index"
   end
   

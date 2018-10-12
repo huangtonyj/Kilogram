@@ -3,7 +3,8 @@ import {
   USER_GET
 } from '../../actions/user_actions.js';
 import {
-  SESSION_POST
+  SESSION_POST,
+  SESSION_DELETE
 } from '../../actions/session_actions.js';
 import {
   POSTS_GET,
@@ -16,16 +17,20 @@ const usersReducer = (state = {}, action) => {
   let newState = Object.assign({}, state);
 
   switch (action.type) {
+
     case USER_POST:
     case SESSION_POST:
       return Object.assign(newState, {
         [action.user.id]: action.user
       });
+
     case USER_GET:
       return Object.assign(newState, action.payload.users);
     case POSTS_GET:
       return Object.assign(newState, action.payload.users);
 
+    case SESSION_DELETE:
+      return {};
 
     default:
       return state;
