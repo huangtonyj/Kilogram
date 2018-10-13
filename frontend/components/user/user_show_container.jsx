@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { ajaxUserGet } from '../../actions/user_actions';
-import { ajaxFollowPostToggle } from '../../actions/follow_actions';
+import { ajaxFollowPost } from '../../actions/follow_actions';
 import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,9 +17,11 @@ const mapStateToProps = (state, ownProps) => {
   });
 };
 
-const mapDispatchToProps = dispatch => ({
-  getUser: (id) => dispatch(ajaxUserGet(id)),
-  toggleFollow: (followeeId) => dispatch(ajaxFollowPostToggle(followeeId))
-});
+const mapDispatchToProps = dispatch => {
+  return ({
+    postFollow: (followeeId) => dispatch(ajaxFollowPost(followeeId)),
+    getUser: (id) => dispatch(ajaxUserGet(id)),
+  });
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserShow);

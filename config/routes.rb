@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   end
 
+  delete 'api/follows/:followee_id', to: 'api/follows#destroy', defaults: {format: :json}
+
 end

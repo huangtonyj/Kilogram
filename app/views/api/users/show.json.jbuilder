@@ -12,3 +12,9 @@ json.posts do
     end
   end
 end
+
+json.followees do
+  @user.followees.each do |followee|
+    json.set! followee.id, :true
+  end
+end

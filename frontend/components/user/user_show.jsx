@@ -22,7 +22,7 @@ class UserShow extends React.Component {
   }
 
   handleFollow() {
-    this.props.toggleFollow(this.props.match.params.userId);
+    this.props.postFollow(this.props.match.params.userId);
   }
 
   render() {
