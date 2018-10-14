@@ -1,0 +1,159 @@
+.post-index {
+  margin: auto 0;
+  padding: 15px;
+}
+
+.post-index-item {
+  margin-bottom: 60px;
+  border: 1px solid $light-gray;
+  width: 614px;
+  // display: flex;
+}
+
+.post-index-item-header {
+  height: 60px;
+  width: 100%;
+  // border: 1px solid $light-gray;
+  align-content: center;
+  border-bottom: 1px solid $light-gray;
+  display: flex;
+  // align-items: center;
+}
+
+.post-index-item-header-container {
+  padding: 12px;
+  display: flex;
+  width: 100%;
+}
+
+.post-index-item-header-profile-pic {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: silver;
+  align-self: center;
+}
+
+.post-index-item-header i {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: silver;
+  align-content: center;
+}
+
+.ost-index-item-header-text {
+  padding: 0px 0px 0px 5px;
+  // align-self: center;
+}
+
+.post-index-item-author {
+  font-weight: bold;
+  font-size: 10pt;
+  // margin: 5px;
+}
+
+.post-index-item-location {
+  font-size: 10pt;
+  // margin: 5px;
+  // align-self: center;
+}
+
+
+
+
+.post-index-item-actionbar {
+  padding: 5px;
+  height: 40px;
+  display: flex;
+  // flex-flow: column;
+  // align-items: flex-start;
+  justify-content: space-between;
+}
+
+.icon-heart {
+  background-position: -136px -102px;
+}
+
+.icon-comment {
+  background-position: -125px -189px;
+}
+
+.icon-share {
+  background-position: -100px -189px;
+}
+
+.icon-bookmark {
+  background-position: -192px -125px;
+  align-self: flex-end;
+}
+
+
+.post-index-item-likes {
+  margin: 10px;
+  // padding: 5px;
+}
+
+.post-index-item-likes span {
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+
+.post-index-item-caption {
+  margin: 10px;
+}
+
+.post-index-item-caption-author {
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.post-index-item-caption-caption {
+  font-size: 10pt;
+}
+
+
+.post-index-item-comment {
+  margin: 10px;
+}
+
+.post-index-item-comment ul li {
+  padding: 5px 2px 6px 0px;
+
+}
+
+.comment-author {
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.comment-body {
+  font-size: 10pt;
+}
+
+.post-index-item-timestamp {
+  font-size: 8pt;
+  color: $light-gray;
+  padding: 5px 0px;
+}
+
+.post-index-item-comment-form {
+  border-top: 1px solid $light-gray;
+  padding: 15px 0px 10px 10px;
+}
+
+.post-index-item-comment-form input {
+  font-size: 10pt;
+  color: $light-gray;
+}
+
+
+
+
+
+
+
+.icon-profile-pic {
+  background-position: 0 0px;
+}

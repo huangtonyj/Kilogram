@@ -30,7 +30,7 @@ class PostIndex extends React.Component {
     );
 
     return (
-      <div>
+      <div className='post-index'>
         <ul>
           {postIndexItem}
         </ul>
