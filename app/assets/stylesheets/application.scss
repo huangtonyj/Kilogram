@@ -39,3 +39,11 @@
 body {
   background-color: $lightest-gray;
 }
+
+.main-content {
+  margin-top: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
