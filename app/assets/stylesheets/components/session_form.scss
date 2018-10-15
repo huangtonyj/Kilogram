@@ -16,12 +16,6 @@
   flex-direction: column;
 }
 
-.signin-form img {
-  height: 45%;
-  width: 45%;
-  margin: 22px 86.5px 12px 86.5px;
-}
-
 .signin-input-container {
   width: 266px;
   height: 36px;
@@ -47,30 +41,12 @@
   // align-self: center;
   // user-select: none;
   // overflow: hidden;
-  position: absolute;
+  // position: absolute;
   // text-overflow: ellipsis;
   // white-space: nowrap;
 }
 
-.signin-input {
-  display: block;
-  // width: 250px;
-  height: 20px;
-  padding: 9px 0 7px 8px;
-  font-size: 12px;
-  background: transparent;
-  z-index: 1;
-  position: absolute;
-  font-size: 10pt;
 
-  // top: 0;
-  // left: -6;
-
-  // outline: 0;
-  // overflow: hidden;
-  // text-align: center;
-
-}
 
 .session-submit-button {
   color: #fff;

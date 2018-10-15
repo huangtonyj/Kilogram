@@ -17,7 +17,8 @@ const Greeting = ({ currentUser, signOut }) => {
     </nav>
   );
 
-  return currentUser ? signedInGreeting() : signedOutGreeting();
+  // return currentUser ? signedInGreeting() : signedOutGreeting();
+  return currentUser ? signedInGreeting() : null;
 };
 
 export default Greeting;

@@ -2,6 +2,10 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import KilogramLogo from '../../../app/assets/images/kilogram_logo.png';
+import AppleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
+import GooglePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
+
 class UserForm extends React.Component {
   constructor(props) {
     super(props);
@@ -45,10 +49,24 @@ class UserForm extends React.Component {
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form-box">
 
+          <img
+            src={KilogramLogo}
+            className="kilogram-logo"
+          />
 
-          {this.renderErrors()}
+          <div>
+            <p> Sign up to see photos and videos from your friends.</p>
+          </div>
+
+
+          <div className='demo-login-container'>
+            Log in with Demo User
+          </div>
+
 
           <div className="signup-form">
+
+
             <br />
             <label>Username:
               <input type="text"
@@ -64,7 +82,7 @@ class UserForm extends React.Component {
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signup-input"
+                className="signup-input input"
               />
             </label>
 
@@ -74,7 +92,7 @@ class UserForm extends React.Component {
               <input type="email"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signup-input"
+                className="signup-input input"
               />
             </label>
 
@@ -94,6 +112,9 @@ class UserForm extends React.Component {
               value="Sign Up"
               className="session-submit" />
           </div>
+
+          {this.renderErrors()}
+
         </form>
       </div>
     );

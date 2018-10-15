@@ -31,7 +31,7 @@ const App = () => (
         <h1> 📷 ⭐ Kilogram ⭐ 📷 </h1>
       </Link> */}
 
-      {/* <GreetingContainer /> */}
+      <GreetingContainer />
 
     </header>
 
