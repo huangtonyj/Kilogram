@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
@@ -41,6 +42,15 @@ class SessionForm extends React.Component {
         </ul>
       );
     }
+  }
+
+  demoLogin() {
+    console.log('demo login')
+    this.setState({
+      username: 'demo',
+      password: 'starwars'
+    });
+    this.props.signIn(this.state);
   }
 
   render() {
@@ -94,7 +104,9 @@ class SessionForm extends React.Component {
 
 
             <div className='demo-login-container'>
-              Log in with Demo User
+              <button onClick={this.demoLogin}>
+                Log in with Demo User
+              </button>
             </div>
 
             <div className='sign-in-error'>

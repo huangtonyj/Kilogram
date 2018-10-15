@@ -60,62 +60,104 @@ class UserForm extends React.Component {
 
 
           <div className='demo-login-container'>
-            Log in with Demo User
+            <button>
+              Log in with Demo User
+              </button>
+          </div>
+
+
+          <div className='or-divider'>
+            <div className='horizontal-line'></div>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div className='horizontal-line'></div>
           </div>
 
 
           <div className="signup-form">
 
+            <div className='signin-input-container'>
+              <label className='signin-input-label'>
+                Email
+              </label>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="signin-input input"
+              />
+            </div>
 
-            <br />
-            <label>Username:
+            <div className='signin-input-container'>
+              <label className='signin-input-label'>
+                Full Name
+              </label>
+              <input type="text"
+                // value={this.state.fullname}
+                // onChange={this.update('fullname')}
+                className="signin-input input"
+              />
+            </div>
+
+            <div className='signin-input-container'>
+              <label className='signin-input-label'>
+                Username
+              </label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="signup-input"
+                className="signin-input input"
               />
-            </label>
+            </div>
 
-            <br />
-
-            <label>Password:
+            <div className='signin-input-container'>
+              <label className='signin-input-label'>
+                Password
+              </label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signup-input input"
+                className="signin-input input"
               />
-            </label>
+            </div>
 
-            <br />
+            <button type="submit"
+              value="Sign up"
+              className="session-submit-button">
+              Sign up
+            </button>
 
-            <label>Email:
-              <input type="email"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="signup-input input"
-              />
-            </label>
-
-            <br />
-
-            <label>Description:
-              <textarea
-                value={this.state.description}
-                onChange={this.update('description')}
-                className="signup-input"
-              />
-            </label>
-
-            <br />
-
-            <input type="submit"
-              value="Sign Up"
-              className="session-submit" />
           </div>
 
-          {this.renderErrors()}
+          <div className='sign-in-error'>
+            {this.renderErrors()}
+          </div>
 
+          <div>
+            <p> By signing up, you agree to our &nbsp;
+              <a href='#'>Terms</a> &nbsp;
+              <a href='#'>Data Policy</a> &nbsp; and &nbsp;
+              <a href='#'>Cookies Policy</a>.
+            </p>
+          </div>
         </form>
+
+        <div className='sign-in-container'>
+          <span>
+            Don't have an account? <Link to='/signin'>Log in</Link>
+          </span>
+        </div>
+
+        <div className='get-the-app-container'>
+          <p>Get the app.</p>
+          <div>
+            <a>
+              <img src={AppleiOSAppStoreLogo} />
+            </a>
+            <a>
+              <img src={GooglePlayStoreLogo} />
+            </a>
+          </div>
+        </div>
+
       </div>
     );
   }
