@@ -2,6 +2,11 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import KilogramLogo from '../../../app/assets/images/kilogram_logo.png';
+import AppleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
+import GooglePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
+
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -43,35 +48,85 @@ class SessionForm extends React.Component {
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form-box">
 
-          {this.renderErrors()}
 
           <div className="signin-form">
-            <br />
-            <label>Username:
+
+            <img
+              src={KilogramLogo}
+              className="kilogram-logo"
+            />
+
+            <div className='signin-input-container'>
+              <label className='signin-input-label'>
+                Username
+              </label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signin-input"
               />
-            </label>
+            </div>
 
-            <br />
-
-            <label>Password:
+            <div className='signin-input-container'>
+              <label className='signin-input-label'>
+                Password
+              </label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signin-input"
               />
-            </label>
+            </div>
 
-            <br />
 
-            <input type="submit"
-              value="Sign In"
-              className="session-submit" />
+            <button type="submit"
+              value="Log In"
+              className="session-submit-button">
+              Log in
+            </button>
+
+
+            <div className='or-divider'>
+              <div className='horizontal-line'></div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <div className='horizontal-line'></div>
+            </div>
+
+
+            <div className='demo-login-container'>
+              Log in with Demo User
+            </div>
+
+            <div className='sign-in-error'>
+              {this.renderErrors()}
+            </div>
+
+            <div className='forgot-password'>
+              <a href='#'>Forgot password?</a>
+            </div>
+
           </div>
         </form>
+
+
+        <div className='sign-up-container'>
+          <span>
+            Don't have an account? <Link to='/signup'>Sign up</Link>
+          </span>
+        </div>
+
+        <div className='get-the-app-container'>
+          <p>Get the app.</p>
+          <div>
+            <a>
+              <img src={AppleiOSAppStoreLogo} />
+            </a>
+            <a>
+              <img src={GooglePlayStoreLogo} />
+            </a>
+          </div>
+        </div>
+
       </div>
     );
   }

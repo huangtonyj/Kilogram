@@ -9,6 +9,7 @@ import UserShow from './user/user_show_container';
 import PostForm from './post/post_form_container';
 import PostIndex from './post/post_index_container';
 
+import Footer from './util_components/footer';
 
 import { ajaxFollowPost, ajaxFollowDelete } from '../util/follow_api_util';
 window.ajaxFollowPost = ajaxFollowPost;
@@ -23,14 +24,14 @@ window.ajaxFollowDelete = ajaxFollowDelete;
 
 
 const App = () => (
-  <div>
+  <div className='root-div'>
 
     <header>
-      <Link to="/" className="header-link">
+      {/* <Link to="/" className="header-link">
         <h1> 📷 ⭐ Kilogram ⭐ 📷 </h1>
-      </Link>
+      </Link> */}
 
-      <GreetingContainer />
+      {/* <GreetingContainer /> */}
 
     </header>
 
@@ -44,6 +45,7 @@ const App = () => (
     <ProtectedRoute exact path='/' component={PostForm} />
     <ProtectedRoute exact path='/' component={PostIndex} />
 
+    <Footer />
 
   </div>
 );

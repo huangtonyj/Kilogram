@@ -1,0 +1,168 @@
+.signin-form-container {
+  // margin: auto 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 350px;
+}
+
+.signin-form {
+  border: 1px $light-gray solid;
+  margin: auto 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signin-form img {
+  height: 45%;
+  width: 45%;
+  margin: 22px 86.5px 12px 86.5px;
+}
+
+.signin-input-container {
+  width: 266px;
+  height: 36px;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 0 40px 6px 40px;
+  display: flex;
+  background-color: #fafafa;
+
+  display: flex;
+  align-items: center;
+}
+
+.signin-input-label {
+  color: #999;
+  font-size: 12px;
+  // width: 100%;
+  height: 36px;
+
+  // text-align: center;
+  // justify-content: center;
+  // align-self: center;
+  // user-select: none;
+  // overflow: hidden;
+  position: absolute;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+}
+
+.signin-input {
+  display: block;
+  // width: 250px;
+  height: 20px;
+  padding: 9px 0 7px 8px;
+  font-size: 12px;
+  background: transparent;
+  z-index: 1;
+  position: absolute;
+  font-size: 10pt;
+
+  // top: 0;
+  // left: -6;
+
+  // outline: 0;
+  // overflow: hidden;
+  // text-align: center;
+
+}
+
+.session-submit-button {
+  color: #fff;
+  background-color: #3897f0;
+  width: 248px;
+  height: 18px;
+  padding: 5px 9px;
+  border: 1px solid #3897f0;
+  margin: 8px 40px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 11pt;
+}
+
+.or-divider {
+  margin: 10px 40px 18px;
+}
+
+.horizontal-line {
+  background-color: #efefef;
+  height: 1px;
+  width: 106.5px;
+  display: inline-block;
+}
+
+.or-divider span {
+  font-weight: 600;
+  color: #999;
+}
+
+.demo-login-container {
+  color: #385185;
+  font-weight: bold;
+  font-size: 10.5pt;
+}
+
+.sign-in-error {
+  margin: 10px 40px auto;
+  color: #ed4956;
+  font-size: 10.5pt;
+  text-align: center;
+}
+
+.forgot-password {
+  line-height: 14px;
+  margin-top: 12px;
+  font-size: 12px;
+  margin-bottom: 18px;
+  color: #003569;
+}
+
+.sign-up-container {
+  border: 1px $light-gray solid;
+  margin: 10px 0px;
+
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-container span {
+  font-size: 10pt;
+}
+
+.sign-up-container span a {
+  color: #3897f0;
+}
+
+.get-the-app-container {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.get-the-app-container p {
+  font-size: 10.5pt;
+  text-align: center;
+  padding: 12px 20px;
+}
+
+.get-the-app-container div {
+  display: flex;
+  justify-content: center;
+}
+
+.get-the-app-container img {
+  height: 40px;
+  width: 136px;
+  display: inline-block;
+  margin: 5px;
+}

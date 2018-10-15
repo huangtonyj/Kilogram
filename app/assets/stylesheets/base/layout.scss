@@ -10,19 +10,19 @@ body {
   font-size: 12px;
 }
 
-button {
-  background-color: $light-blue;
-  border-color: $dark-blue;
-  color: white;
-  font-weight: bold;
-  padding: 7px 9px;
-  border-radius: 3px;
-  transition: background-color 0.3s;
-  font-family: $helvetica;
-  text-transform: uppercase;
-  font-size: 11px;
-  text-align: center;
-}
+// button {
+//   background-color: $light-blue;
+//   border-color: $dark-blue;
+//   color: white;
+//   font-weight: bold;
+//   padding: 7px 9px;
+//   border-radius: 3px;
+//   transition: background-color 0.3s;
+//   font-family: $helvetica;
+//   text-transform: uppercase;
+//   font-size: 11px;
+//   text-align: center;
+// }
 
 button:hover {
   background-color: $blue;
@@ -105,25 +105,25 @@ hr {
 	Inputs
 */
 
-.input-wrapper {
-  display: flex;
-  margin: 5px 0;
-}
+// .input-wrapper {
+//   display: flex;
+//   margin: 5px 0;
+// }
 
-.input-wrapper input {
-  flex: 1;
-  font-family: $helvetica;
-  padding: 0 10px;
-  border: 1px solid $gray;
-  border-right: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
+// .input-wrapper input {
+//   flex: 1;
+//   font-family: $helvetica;
+//   padding: 0 10px;
+//   border: 1px solid $gray;
+//   border-right: none;
+//   border-top-right-radius: 0;
+//   border-bottom-right-radius: 0;
+// }
 
-.input-wrapper button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
+// .input-wrapper button {
+//   border-top-left-radius: 0;
+//   border-bottom-left-radius: 0;
+// }
 
 input[type="search"] {
   padding: 5px;

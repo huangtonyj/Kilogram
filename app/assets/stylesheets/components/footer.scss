@@ -1,0 +1,23 @@
+.footer {
+  // width: 350px;
+}
+
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer ul li {
+  color: #003569;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 9pt;
+}
+
+.footer p {
+  color: #999;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px;
+}

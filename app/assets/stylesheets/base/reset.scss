@@ -1,3 +1,7 @@
+#root {
+  margin: auto 0;
+}
+
 html,
 body,
 header,
@@ -25,7 +29,7 @@ article,
 footer,
 time,
 small {
-  margin: 0;
+  margin: auto 0;
   padding: 0;
   border: 0;
   outline: 0;
