@@ -49,100 +49,102 @@ class UserForm extends React.Component {
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form-box">
 
-          <img
-            src={KilogramLogo}
-            className="kilogram-logo"
-          />
+          <div className="signin-form">
+            <img
+              src={KilogramLogo}
+              className="kilogram-logo"
+            />
 
-          <div>
-            <p> Sign up to see photos and videos from your friends.</p>
-          </div>
-
-
-          <div className='demo-login-container'>
-            <button>
-              Log in with Demo User
-              </button>
-          </div>
-
-
-          <div className='or-divider'>
-            <div className='horizontal-line'></div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div className='horizontal-line'></div>
-          </div>
-
-
-          <div className="signup-form">
-
-            <div className='signin-input-container'>
-              <label className='signin-input-label'>
-                Email
-              </label>
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="signin-input input"
-              />
+            <div className='sign-up-caption'>
+              <h2> Sign up to see photos and videos from your friends.</h2>
             </div>
 
-            <div className='signin-input-container'>
-              <label className='signin-input-label'>
-                Full Name
-              </label>
-              <input type="text"
-                // value={this.state.fullname}
-                // onChange={this.update('fullname')}
-                className="signin-input input"
-              />
+            <div className='demo-login-container'>
+              <button
+                className="session-submit-button">
+                Log in with Demo User
+            </button>
             </div>
 
-            <div className='signin-input-container'>
-              <label className='signin-input-label'>
-                Username
-              </label>
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="signin-input input"
-              />
+
+            <div className='or-divider'>
+              <div className='horizontal-line'></div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <div className='horizontal-line'></div>
             </div>
 
-            <div className='signin-input-container'>
-              <label className='signin-input-label'>
-                Password
-              </label>
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="signin-input input"
-              />
-            </div>
 
-            <button type="submit"
-              value="Sign up"
-              className="session-submit-button">
-              Sign up
+            <div className="signup-form">
+
+              <div className='signin-input-container'>
+                <label className='signin-input-label'>
+                  Email
+              </label>
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="signin-input input"
+                />
+              </div>
+
+              <div className='signin-input-container'>
+                <label className='signin-input-label'>
+                  Full Name
+              </label>
+                <input type="text"
+                  // value={this.state.fullname}
+                  // onChange={this.update('fullname')}
+                  className="signin-input input"
+                />
+              </div>
+
+              <div className='signin-input-container'>
+                <label className='signin-input-label'>
+                  Username
+              </label>
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="signin-input input"
+                />
+              </div>
+
+              <div className='signin-input-container'>
+                <label className='signin-input-label'>
+                  Password
+              </label>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="signin-input input"
+                />
+              </div>
+
+              <button type="submit"
+                value="Sign up"
+                className="session-submit-button">
+                Sign up
             </button>
 
-          </div>
+            </div>
 
-          <div className='sign-in-error'>
-            {this.renderErrors()}
-          </div>
+            <div className='sign-in-error'>
+              {this.renderErrors()}
+            </div>
 
-          <div>
-            <p> By signing up, you agree to our &nbsp;
+            <div className='sign-up-agreement-container'>
+              <p> By signing up, you agree to our &nbsp;
               <a href='#'>Terms</a> &nbsp;
-              <a href='#'>Data Policy</a> &nbsp; and &nbsp;
+              <a href='#'>Data Policy</a>&nbsp; and &nbsp;
               <a href='#'>Cookies Policy</a>.
             </p>
+            </div>
           </div>
         </form>
 
-        <div className='sign-in-container'>
+        <div className='sign-up-container'>
           <span>
-            Don't have an account? <Link to='/signin'>Log in</Link>
+            Have an account? <Link to='/signin'>Log in</Link>
           </span>
         </div>
 
