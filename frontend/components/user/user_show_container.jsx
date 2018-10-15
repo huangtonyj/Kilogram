@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { ajaxUserGet } from '../../actions/user_actions';
-import { ajaxFollowPost } from '../../actions/follow_actions';
+import { ajaxFollowPost, ajaxFollowDelete } from '../../actions/follow_actions';
 import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => {
@@ -19,8 +19,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return ({
-    postFollow: (followeeId) => dispatch(ajaxFollowPost(followeeId)),
     getUser: (id) => dispatch(ajaxUserGet(id)),
+    postFollow: (followeeId) => dispatch(ajaxFollowPost(followeeId)),
+    deleteFollow: (followeeId) => dispatch(ajaxFollowDelete(followeeId)),
   });
 };
 

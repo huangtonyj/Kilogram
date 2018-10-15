@@ -5,10 +5,13 @@ class UserShow extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       user: null
     };
+
     this.handleFollow = this.handleFollow.bind(this);
+    this.handleUnfollow = this.handleUnfollow.bind(this);
   }
 
   componentDidMount() {
@@ -25,6 +28,12 @@ class UserShow extends React.Component {
     this.props.postFollow(this.props.match.params.userId);
   }
 
+  handleUnfollow() {
+    this.props.deleteFollow(this.props.match.params.userId);
+  }
+
+
+
   render() {
 
     if (!this.props.user) { return null; }
@@ -35,7 +44,12 @@ class UserShow extends React.Component {
 
         <button
           onClick={this.handleFollow}>
-          {'Follow Toggle'}
+          {'Follow'}
+        </button><br />
+
+        <button
+          onClick={this.handleUnfollow}>
+          {'Unfollow'}
         </button>
 
         <p>{this.props.user.description}</p>
