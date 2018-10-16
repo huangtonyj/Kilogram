@@ -53,21 +53,19 @@ class SessionForm extends React.Component {
   }
 
   demoLogin() {
-    console.log('demo login')
-    this.setState({
+    this.props.signIn({
       username: 'demo',
       password: 'starwars'
     });
-    this.props.signIn(this.state);
   }
 
   render() {
     return (
       <div className="signin-form-container">
-        <form onSubmit={this.handleSubmit} className="signin-form-box">
+        <div className="signin-form">
+          <form onSubmit={this.handleSubmit} className="signin-form-box">
 
 
-          <div className="signin-form">
 
             <img
               src={kilogramLogo}
@@ -75,24 +73,26 @@ class SessionForm extends React.Component {
             />
 
             <div className='signin-input-container'>
-              <label className='signin-input-label'>
+              {/* <label className='signin-input-label'>
                 Username
-              </label>
+              </label> */}
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signin-input input"
+                placeholder='Username'
               />
             </div>
 
             <div className='signin-input-container'>
-              <label className='signin-input-label'>
+              {/* <label className='signin-input-label'>
                 Password
-              </label>
+              </label> */}
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signin-input input"
+                placeholder='Password'
               />
             </div>
 
@@ -102,31 +102,30 @@ class SessionForm extends React.Component {
               className="session-submit-button">
               Log in
             </button>
+          </form>
 
-
-            <div className='or-divider'>
-              <div className='horizontal-line'></div>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
-              <div className='horizontal-line'></div>
-            </div>
-
-
-            <div className='demo-login-container'>
-              <button onClick={this.demoLogin}>
-                Log in with Demo User
-              </button>
-            </div>
-
-            <div className='sign-in-error'>
-              {this.renderErrors()}
-            </div>
-
-            <div className='forgot-password'>
-              <a href='#'>Forgot password?</a>
-            </div>
-
+          <div className='or-divider'>
+            <div className='horizontal-line'></div>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div className='horizontal-line'></div>
           </div>
-        </form>
+
+
+          <div className='demo-login-container'>
+            <button onClick={this.demoLogin}>
+              Log in with Demo User
+              </button>
+          </div>
+
+          <div className='sign-in-error'>
+            {this.renderErrors()}
+          </div>
+
+          <div className='forgot-password'>
+            <a href='#'>Forgot password?</a>
+          </div>
+
+        </div>
 
 
         <div className='sign-up-container'>

@@ -16,6 +16,7 @@ class UserForm extends React.Component {
       description: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
@@ -44,6 +45,13 @@ class UserForm extends React.Component {
     }
   }
 
+  demoLogin() {
+    this.props.signIn({
+      username: 'demo',
+      password: 'starwars'
+    });
+  }
+
   render() {
     return (
       <div className="signin-form-container">
@@ -61,7 +69,8 @@ class UserForm extends React.Component {
 
             <div className='demo-login-container'>
               <button
-                className="session-submit-button">
+                className="session-submit-button"
+                onClick={this.demoLogin}>
                 Log in with Demo User
             </button>
             </div>
@@ -77,46 +86,50 @@ class UserForm extends React.Component {
             <div className="signup-form">
 
               <div className='signin-input-container'>
-                <label className='signin-input-label'>
+                {/* <label className='signin-input-label'>
                   Email
-              </label>
+                </label> */}
                 <input type="text"
                   value={this.state.email}
                   onChange={this.update('email')}
                   className="signin-input input"
+                  placeholder='Email'
                 />
               </div>
 
               <div className='signin-input-container'>
-                <label className='signin-input-label'>
+                {/* <label className='signin-input-label'>
                   Full Name
-              </label>
+                 </label> */}
                 <input type="text"
                   // value={this.state.fullname}
                   // onChange={this.update('fullname')}
                   className="signin-input input"
+                  placeholder='Full Name'
                 />
               </div>
 
               <div className='signin-input-container'>
-                <label className='signin-input-label'>
+                {/* <label className='signin-input-label'>
                   Username
-              </label>
+                </label> */}
                 <input type="text"
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="signin-input input"
+                  placeholder='Username'
                 />
               </div>
 
               <div className='signin-input-container'>
-                <label className='signin-input-label'>
+                {/* <label className='signin-input-label'>
                   Password
-              </label>
+                </label> */}
                 <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="signin-input input"
+                  placeholder='Password'
                 />
               </div>
 
