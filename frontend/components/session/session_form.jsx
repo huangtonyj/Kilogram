@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 // import AppleiOSAppStoreLogo from './ios_app_store.png';
 // import GooglePlayStoreLogo from './google_play_store.png';
 
-import KilogramLogo from '/app/assets/images/kilogram_logo.png';
-import AppleiOSAppStoreLogo from '/app/assets/images/ios_app_store.png';
-import GooglePlayStoreLogo from '/app/assets/images/google_play_store.png';
+// import KilogramLogo from '/app/assets/images/kilogram_logo.png';
+// import AppleiOSAppStoreLogo from '/app/assets/images/ios_app_store.png';
+// import GooglePlayStoreLogo from '/app/assets/images/google_play_store.png';
 
-// import KilogramLogo from '../../../app/assets/images/kilogram_logo.png';
-// import AppleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
-// import GooglePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
+import KilogramLogo from '../../../app/assets/images/kilogram_logo.png';
+import AppleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
+import GooglePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
 
 
 class SessionForm extends React.Component {
