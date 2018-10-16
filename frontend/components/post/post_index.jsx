@@ -26,7 +26,7 @@ class PostIndex extends React.Component {
           post={post}
           author={this.props.users[post.authorId]}
         />
-      )
+      ).reverse()
     );
 
     return (

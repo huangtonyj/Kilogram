@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 
 import App from './components/app.jsx';
+// import { ajaxUserGet } from './util/user_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -13,17 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
     const { currentUser } = window;
-    const { id } = currentUser;
+    const { id } = window.currentUser;
+    // let currentUserInfo;
+
+    // ajaxUserGet(id).then((response) => { console.log(response.users[id]); });
+    // ajaxUserGet(id).then((response) => { currentUserInfo = (response.users[id]); });
+
     const preloadedState = {
       entities: {
         users: {
-          [id]: currentUser
+          [id]: currentUser,
+          // test: currentUserInfo
         }
       },
       session: { id },
-      errors: {
-        session: { id }
-      }
+      errors: {}
     };
     store = configureStore(preloadedState);
 

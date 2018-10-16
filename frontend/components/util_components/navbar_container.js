@@ -5,6 +5,9 @@ import {
 import {
   ajaxSessionDelete
 } from '../../actions/session_actions';
+import {
+  ajaxUserGet
+} from '../../actions/user_actions';
 import NavBar from './navbar';
 
 const mapStateToProps = ({
@@ -17,7 +20,8 @@ const mapStateToProps = ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  signOut: () => dispatch(ajaxSessionDelete())
+  signOut: () => dispatch(ajaxSessionDelete()),
+  getCurrentUserInfo: (id) => dispatch(ajaxUserGet(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
