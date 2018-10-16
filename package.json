@@ -45,5 +45,8 @@
   "bugs": {
     "url": "https://github.com/huangtonyj/Kilogram/issues"
   },
-  "homepage": "https://github.com/huangtonyj/Kilogram#readme"
+  "homepage": "https://github.com/huangtonyj/Kilogram#readme",
+  "devDependencies": {
+    "resolve-url-loader": "^3.0.0"
+  }
 }
