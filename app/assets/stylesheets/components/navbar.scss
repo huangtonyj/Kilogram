@@ -2,12 +2,12 @@
   background-color: white;
   height: 52px;
   width: 100%;
-  width: 625px;
-  margin: 0 auto;
+  // width: 625px;
+  // margin: 0 auto;
 
   position: fixed;
   top: 0;
-  left: 0;
+  // left: 0;
 
   display: flex;
   justify-content: space-between;
@@ -50,6 +50,11 @@
 .navbar-greeting {
   display: flex;
   align-content: center;
+}
+
+.navbar-greeting p {
+  font-weight: 300;
+  font-size: 20px;
 }
 
 

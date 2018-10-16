@@ -22,7 +22,7 @@ const NavBar = ({ currentUser, signOut }) => {
       </div>
 
       <div className='navbar-greeting'>
-        <h3>Hello, {currentUser.username}!</h3>
+        <p>Hello, {currentUser.username}!</p>
       </div>
 
       <div className='navbar-links'>
