@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
+// import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
 
 const NavBar = ({ currentUser, signOut }) => {
   return (
@@ -11,7 +11,7 @@ const NavBar = ({ currentUser, signOut }) => {
           <div></div>
 
           <img
-            src={kilogramLogo}
+            src={window.images.Kilogram_logo}
             className="kilogram-logo"
           />
 

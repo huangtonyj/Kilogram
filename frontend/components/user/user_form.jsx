@@ -2,9 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import KilogramLogo from '../../../app/assets/images/kilogram_logo.png';
-import AppleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
-import GooglePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
+// import KilogramLogo from '../../../app/assets/images/kilogram_logo.png';
+// import AppleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
+// import GooglePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
 
 class UserForm extends React.Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class UserForm extends React.Component {
 
           <div className="signin-form">
             <img
-              src={KilogramLogo}
+              src={window.images.Kilogram_logo}
               className="kilogram-logo"
             />
 
@@ -165,10 +165,10 @@ class UserForm extends React.Component {
           <p>Get the app.</p>
           <div>
             <a>
-              <img src={AppleiOSAppStoreLogo} />
+              <img src={window.images.ios_app_store} />
             </a>
             <a>
-              <img src={GooglePlayStoreLogo} />
+              <img src={window.images.google_play_store} />
             </a>
           </div>
         </div>

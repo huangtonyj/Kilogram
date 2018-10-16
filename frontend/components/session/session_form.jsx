@@ -68,7 +68,7 @@ class SessionForm extends React.Component {
 
 
             <img
-              src={window.images.kilogramLogo}
+              src={window.images.Kilogram_logo}
               className="kilogram-logo"
             />
             {/* <img
@@ -143,11 +143,11 @@ class SessionForm extends React.Component {
           <div>
             <a>
               {/* <img src={appleiOSAppStoreLogo} /> */}
-              <img src={window.images.kilogramLogo} />
+              <img src={window.images.ios_app_store} />
             </a>
             <a>
               {/* <img src={googlePlayStoreLogo} /> */}
-              <img src={window.images.kilogramLogo} />
+              <img src={window.images.google_play_store} />
             </a>
           </div>
         </div>
