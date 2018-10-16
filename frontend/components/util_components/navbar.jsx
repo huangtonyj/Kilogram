@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
 
-// const NavBar = ({ currentUser, signOut }) => {
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);

@@ -19,6 +19,12 @@ class PostIndex extends React.Component {
 
     if (this.state.loading) return <h3>loading...</h3>;
 
+    // console.log(this.props);
+    // debugger
+
+    // if (this.props)
+
+
     const postIndexItem = (
       this.props.posts.map((post) =>
         <PostIndexItem
