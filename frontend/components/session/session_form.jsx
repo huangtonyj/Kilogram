@@ -68,9 +68,13 @@ class SessionForm extends React.Component {
 
 
             <img
-              src={kilogramLogo}
+              src={window.images.kilogramLogo}
               className="kilogram-logo"
             />
+            {/* <img
+              src={kilogramLogo}
+              className="kilogram-logo"
+            /> */}
 
             <div className='signin-input-container'>
               {/* <label className='signin-input-label'>
