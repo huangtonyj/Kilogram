@@ -1,11 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
 
 const NavBar = ({ currentUser, signOut }) => {
   return (
     <div className='navbar'>
       <div className='navbar-logo'>
-        <a href="#" className="icon-logo"></a>
+        <a href="#" className="icon-logo">
+
+          <div></div>
+
+          <img
+            src={kilogramLogo}
+            className="kilogram-logo"
+          />
+
+
+        </a>
+
+
       </div>
 
       <div className='navbar-greeting'>

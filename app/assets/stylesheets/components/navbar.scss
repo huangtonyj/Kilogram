@@ -20,11 +20,31 @@
 }
 
 .navbar-logo {
-  // align-self: flex-start;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
 }
 
 .icon-logo {
   background-position: -75px -164px;
+}
+
+.navbar-logo img {
+  // margin: auto 0;
+  margin-left: 57px;
+  margin-top: -26px;
+  width: 72px;
+  height: 30px;
+}
+
+.navbar-logo div {
+  width: 1px;
+  height: 28px;
+  background-color: #262626;
+  // background-color: red;
+  margin-left: 40px;
+  margin-right: 16px;
+  margin-top: -2px;
 }
 
 
