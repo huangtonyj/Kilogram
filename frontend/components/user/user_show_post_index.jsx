@@ -29,7 +29,7 @@ class UserShowPostIndex extends React.Component {
     );
 
     return (
-      <div>
+      <div className='user-show-profile-posts'>
         <ul>
           {userShowPostIndexItem}
         </ul>

@@ -39,24 +39,46 @@ class UserShow extends React.Component {
     if (!this.props.user) { return null; }
 
     return (
-      <div>
-        <h1>{this.props.user.username}</h1>
+      <div className='user-show-profile'>
+        <div className='user-show-profile-header'>
 
-        <button
-          onClick={this.handleFollow}>
-          {'Follow'}
-        </button><br />
+          <div className='user-show-avatar-container'>
+            <div className='user-show-avatar'>
 
-        <button
-          onClick={this.handleUnfollow}>
-          {'Unfollow'}
-        </button>
+            </div>
+          </div>
 
-        <p>{this.props.user.description}</p>
+          <div className='user-show-profile-info'>
+            <div className='user-show-profile-info-A'>
+              <p className='user-show-username'>{this.props.user.username}</p>
+
+              <button
+                onClick={this.handleFollow}>
+                {'Follow'}
+              </button><br />
+
+              <button
+                onClick={this.handleUnfollow}>
+                {'Unfollow'}
+              </button>
+            </div>
+
+            <div className='user-show-profile-info-B'>
+              <span><b>152</b> posts</span>
+              <span><b>200</b> followers</span>
+              <span><b>265</b> following</span>
+            </div>
+
+            <div className='user-show-profile-info-C'>
+              <p>{this.props.user.description}</p>
+            </div>
+
+
+          </div>
+        </div>
 
         <UserShowPostIndex
           posts={this.props.posts} />
-
       </div>
     );
   }
