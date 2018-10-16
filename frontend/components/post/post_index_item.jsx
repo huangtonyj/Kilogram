@@ -9,7 +9,7 @@ const PostIndexItem = ({ post, author }) => (
 
         <div className='post-index-item-header-container'>
           {/* <div className='post-index-item-header-profile-pic'> */}
-          <i class="fas fa-user "></i>
+          <i className="fas fa-user "></i>
           {/* </div> */}
 
           <div className='post-index-item-header-text'>
@@ -82,7 +82,7 @@ const PostIndexItem = ({ post, author }) => (
         <form className='post-index-item-comment-form'>
           <input
             type="text"
-            value="Add a comment..."
+            placeholder="Add a comment..."
           />
         </form>
       </div>
