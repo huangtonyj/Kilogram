@@ -2,17 +2,17 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-// import KilogramLogo from './kilogram_logo.png';
-// import AppleiOSAppStoreLogo from './ios_app_store.png';
-// import GooglePlayStoreLogo from './google_play_store.png';
+// import kilogramLogo from './kilogram_logo.png';
+// import appleiOSAppStoreLogo from './ios_app_store.png';
+// import googlePlayStoreLogo from './google_play_store.png';
 
-// import KilogramLogo from '/app/assets/images/kilogram_logo.png';
-// import AppleiOSAppStoreLogo from '/app/assets/images/ios_app_store.png';
-// import GooglePlayStoreLogo from '/app/assets/images/google_play_store.png';
+// import kilogramLogo from '/app/assets/images/kilogram_logo.png';
+// import appleiOSAppStoreLogo from '/app/assets/images/ios_app_store.png';
+// import googlePlayStoreLogo from '/app/assets/images/google_play_store.png';
 
-import KilogramLogo from '../../../app/assets/images/kilogram_logo.png';
-import AppleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
-import GooglePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
+import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
+import appleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
+import googlePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
 
 
 class SessionForm extends React.Component {
@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
           <div className="signin-form">
 
             <img
-              src={KilogramLogo}
+              src={kilogramLogo}
               className="kilogram-logo"
             />
 
@@ -139,10 +139,10 @@ class SessionForm extends React.Component {
           <p>Get the app.</p>
           <div>
             <a>
-              <img src={AppleiOSAppStoreLogo} />
+              <img src={appleiOSAppStoreLogo} />
             </a>
             <a>
-              <img src={GooglePlayStoreLogo} />
+              <img src={googlePlayStoreLogo} />
             </a>
           </div>
         </div>
