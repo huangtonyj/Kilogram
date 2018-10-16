@@ -35,9 +35,9 @@ const App = () => (
 
       <ProtectedRoute exact path='/' component={PostIndex} />
 
-      <Footer />
     </div>
 
+    <Footer />
   </div>
 );
 
