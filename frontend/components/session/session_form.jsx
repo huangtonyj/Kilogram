@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom';
 // import appleiOSAppStoreLogo from '/app/assets/images/ios_app_store.png';
 // import googlePlayStoreLogo from '/app/assets/images/google_play_store.png';
 
-import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
-import appleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
-import googlePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
+// import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
+// import appleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
+// import googlePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
 
 
 class SessionForm extends React.Component {
@@ -142,10 +142,12 @@ class SessionForm extends React.Component {
           <p>Get the app.</p>
           <div>
             <a>
-              <img src={appleiOSAppStoreLogo} />
+              {/* <img src={appleiOSAppStoreLogo} /> */}
+              <img src={window.images.kilogramLogo} />
             </a>
             <a>
-              <img src={googlePlayStoreLogo} />
+              {/* <img src={googlePlayStoreLogo} /> */}
+              <img src={window.images.kilogramLogo} />
             </a>
           </div>
         </div>
