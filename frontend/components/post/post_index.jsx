@@ -21,12 +21,17 @@ class PostIndex extends React.Component {
     if (!this.props.posts[0]) return null;
     if (!this.props.posts[0].likers) return null;
 
+    console.log(this.props);
+
     const postIndexItem = (
       this.props.posts.map((post) =>
         <PostIndexItem
           key={post.id}
           post={post}
           author={this.props.users[post.authorId]}
+          currentuser={this.props.currentUser} // can't capitalize this!
+          postLike={this.props.postLike}
+          deleteLike={this.props.deleteLike}
         />
       ).reverse()
     );
