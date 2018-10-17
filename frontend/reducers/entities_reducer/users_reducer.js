@@ -1,3 +1,5 @@
+import merge from 'lodash/merge';
+
 import {
   USER_POST,
   USER_GET
@@ -12,22 +14,23 @@ import {
   POST_POST
 } from '../../actions/post_actions';
 
+
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
-  let newState = Object.assign({}, state);
+  let newState = merge({}, state);
 
   switch (action.type) {
 
     case USER_POST:
     case SESSION_POST:
-      return Object.assign(newState, {
+      return merge(newState, {
         [action.user.id]: action.user
       });
 
     case USER_GET:
-      return Object.assign(newState, action.payload.users);
+      return merge(newState, action.payload.users);
     case POSTS_GET:
-      return Object.assign(newState, action.payload.users);
+      return merge(newState, action.payload.users);
 
     case SESSION_DELETE:
       return {};
