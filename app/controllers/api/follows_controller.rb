@@ -5,7 +5,8 @@ class Api::FollowsController < ApplicationController
     @follow = Follow.new(follow_params)
     @follow.follower_id = current_user.id
     if @follow.save
-      render json: ["You've followed"]
+      # render json: ["You've followed"]
+      render json: {followee_id: @follow.followee_id, follower_id: @follow.follower_id}
     else
       render json: @follow.errors.full_messages, status: 422
     end
@@ -18,7 +19,8 @@ class Api::FollowsController < ApplicationController
 
     if @follow
       @follow.destroy
-      render json: ["You've unfollowed"]
+      # render json: ["You've unfollowed"]
+      render json: {followee_id: @follow.followee_id, follower_id: @follow.follower_id}
     else
       render json: @follow.errors.full_messages, status: 422
     end

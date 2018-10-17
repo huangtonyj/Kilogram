@@ -13,6 +13,10 @@ import {
   POST_GET,
   POST_POST
 } from '../../actions/post_actions';
+import {
+  FOLLOW_POST,
+  FOLLOW_DELETE
+} from '../../actions/follow_actions';
 
 
 const usersReducer = (state = {}, action) => {
@@ -34,6 +38,14 @@ const usersReducer = (state = {}, action) => {
 
     case SESSION_DELETE:
       return {};
+
+    case FOLLOW_POST:
+      newState[action.follow.follower_id].followees[action.follow.followee_id] = true;
+      return newState;
+
+    case FOLLOW_DELETE:
+      newState[action.follow.follower_id].followees[action.follow.followee_id] = false;
+      return newState;
 
     default:
       return state;
