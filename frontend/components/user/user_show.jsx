@@ -36,7 +36,23 @@ class UserShow extends React.Component {
 
   render() {
 
-    if (!this.props.user) { return null; }
+    if (!this.props.user.description) { return null; }
+
+    // debugger
+
+    const followButton = () => (
+      !!(this.props.user.followees[this.props.match.params.userId]) ? (
+        <button
+          onClick={this.handleUnfollow}>
+          {'Unfollow'}
+        </button>
+      ) : (
+          <button
+            onClick={this.handleFollow}>
+            {'Follow'}
+          </button>
+        )
+    );
 
     return (
       <div className='user-show-profile'>
@@ -52,15 +68,9 @@ class UserShow extends React.Component {
             <div className='user-show-profile-info-A'>
               <p className='user-show-username'>{this.props.user.username}</p>
 
-              <button
-                onClick={this.handleFollow}>
-                {'Follow'}
-              </button><br />
+              {followButton()}
 
-              <button
-                onClick={this.handleUnfollow}>
-                {'Unfollow'}
-              </button>
+
             </div>
 
             <div className='user-show-profile-info-B'>
