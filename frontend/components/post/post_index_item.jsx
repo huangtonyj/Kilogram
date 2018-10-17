@@ -42,7 +42,7 @@ const PostIndexItem = ({ post, author }) => (
 
 
       <div className='post-index-item-likes'>
-        <span>333 likes</span>
+        <span>{Object.values(post.likers).filter(like => like === "true").length} likes</span>
       </div>
 
 
