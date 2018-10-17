@@ -4,7 +4,7 @@ class PostForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      caption: "",
+      caption: '',
       photoFile: null,
       photoUrl: null
     };
@@ -16,6 +16,7 @@ class PostForm extends React.Component {
   handleInput(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
+      console.log(this.state.caption);
     };
   }
 
@@ -48,8 +49,11 @@ class PostForm extends React.Component {
           photoFile: null,
           photoUrl: null
         })
-      ));
-
+      ))
+      .then(() => {
+        this.props.history.push('/');
+      }
+      );
   }
 
   renderErrors() {
@@ -78,6 +82,7 @@ class PostForm extends React.Component {
             <div className='post-form-file-caption-container'>
               <input type="text"
                 placeholder='caption'
+                onChange={this.handleInput('caption')}
               />
             </div>
 
