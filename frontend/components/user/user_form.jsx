@@ -55,33 +55,33 @@ class UserForm extends React.Component {
   render() {
     return (
       <div className="signin-form-container">
-        <form onSubmit={this.handleSubmit} className="signin-form-box">
 
-          <div className="signin-form">
-            <img
-              src={window.images.Kilogram_logo}
-              className="kilogram-logo"
-            />
+        <div className="signin-form">
+          <img
+            src={window.images.Kilogram_logo}
+            className="kilogram-logo"
+          />
 
-            <div className='sign-up-caption'>
-              <h2> Sign up to see photos and videos from your friends.</h2>
-            </div>
+          <div className='sign-up-caption'>
+            <h2> Sign up to see photos and videos from your friends.</h2>
+          </div>
 
-            <div className='demo-login-container'>
-              <button
-                className="session-submit-button"
-                onClick={this.demoLogin}>
-                Log in with Demo User
+          <div className='demo-login-container'>
+            <button
+              className="session-submit-button"
+              onClick={this.demoLogin}>
+              Log in with Demo User
             </button>
-            </div>
+          </div>
 
 
-            <div className='or-divider'>
-              <div className='horizontal-line'></div>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
-              <div className='horizontal-line'></div>
-            </div>
+          <div className='or-divider'>
+            <div className='horizontal-line'></div>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div className='horizontal-line'></div>
+          </div>
 
+          <form onSubmit={this.handleSubmit} className="signin-form-box">
 
             <div className="signup-form">
 
@@ -140,20 +140,20 @@ class UserForm extends React.Component {
             </button>
 
             </div>
+          </form>
 
-            <div className='sign-in-error'>
-              {this.renderErrors()}
-            </div>
+          <div className='sign-in-error'>
+            {this.renderErrors()}
+          </div>
 
-            <div className='sign-up-agreement-container'>
-              <p> By signing up, you agree to our &nbsp;
+          <div className='sign-up-agreement-container'>
+            <p> By signing up, you agree to our &nbsp;
               <a href='#'>Terms</a> &nbsp;
               <a href='#'>Data Policy</a>&nbsp; and &nbsp;
               <a href='#'>Cookies Policy</a>.
             </p>
-            </div>
           </div>
-        </form>
+        </div>
 
         <div className='sign-up-container'>
           <span>

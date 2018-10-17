@@ -150,9 +150,13 @@ h2 {
 .sign-up-agreement-container {
   color: $gray;
   width: 200px;
-  text-align: center;
   margin-bottom: 25px;
   font-size: 10.5pt;
+}
+
+.sign-up-agreement-container p {
+  text-align: center;
+
 }
 
 .sign-up-agreement-container a {
