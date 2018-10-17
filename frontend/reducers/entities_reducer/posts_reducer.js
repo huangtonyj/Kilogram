@@ -11,6 +11,10 @@ import {
   SESSION_POST,
   SESSION_DELETE,
 } from '../../actions/session_actions.js';
+import {
+  LIKE_POST,
+  LIKE_DELETE
+} from '../../actions/like_actions';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -25,6 +29,14 @@ const usersReducer = (state = {}, action) => {
     case POST_GET:
     case POST_POST:
       return Object.assign(action.payload.posts, newState);
+
+    case LIKE_POST:
+      newState[action.like.post_id].likers[action.like.user_id] = true;
+      return newState;
+
+    case LIKE_DELETE:
+      newState[action.like.post_id].likers[action.like.user_id] = false;
+      return newState;
 
     case SESSION_DELETE:
       return {};

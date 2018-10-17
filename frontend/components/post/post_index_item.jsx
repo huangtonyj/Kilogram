@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// const PostIndexItem = ({ post, author }) => (
-
 class PostIndexItem extends React.Component {
 
   constructor(props) {
     super(props);
-    // this.handleLike = this.handleLike.bind(this);
   }
 
   handleLike(postId) {
@@ -23,9 +20,7 @@ class PostIndexItem extends React.Component {
 
 
   render() {
-    console.log(this.props);
     const { post, author, currentUser } = this.props;
-
 
     const likeButton = (
       (this.props.post.likers[this.props.currentuser.id]) ? (
