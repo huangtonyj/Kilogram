@@ -7,7 +7,7 @@ class UserShow extends React.Component {
     super(props);
 
     this.state = {
-      user: null
+      user: null,
     };
 
     this.handleFollow = this.handleFollow.bind(this);
@@ -33,23 +33,23 @@ class UserShow extends React.Component {
   }
 
 
-
   render() {
 
-    if (!this.props.user.description) { return null; }
+    if (!this.props.user) { return null; }
 
-    // debugger
-
-    const followButton = () => (
-      !!(this.props.user.followees[this.props.match.params.userId]) ? (
+    let followButton = (
+      (this.props.currentUser.followees[this.props.match.params.userId]) ? (
         <button
-          onClick={this.handleUnfollow}>
-          {'Unfollow'}
+          onClick={this.handleUnfollow}
+          disabled={this.props.currentUser.id == this.props.match.params.userId}
+        >
+          Unfollow
         </button>
       ) : (
           <button
-            onClick={this.handleFollow}>
-            {'Follow'}
+            onClick={this.handleFollow}
+          >
+            Follow
           </button>
         )
     );
@@ -68,8 +68,7 @@ class UserShow extends React.Component {
             <div className='user-show-profile-info-A'>
               <p className='user-show-username'>{this.props.user.username}</p>
 
-              {followButton()}
-
+              {followButton}
 
             </div>
 

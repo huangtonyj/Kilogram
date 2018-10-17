@@ -25,7 +25,7 @@ class UserShowPostIndex extends React.Component {
           key={post.id}
           post={post}
         />
-      )
+      ).reverse()
     );
 
     return (

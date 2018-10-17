@@ -41,10 +41,12 @@ const usersReducer = (state = {}, action) => {
 
     case FOLLOW_POST:
       newState[action.follow.follower_id].followees[action.follow.followee_id] = true;
+      newState[action.follow.followee_id].followers[action.follow.follower_id] = true;
       return newState;
 
     case FOLLOW_DELETE:
       newState[action.follow.follower_id].followees[action.follow.followee_id] = false;
+      newState[action.follow.followee_id].followers[action.follow.follower_id] = false;
       return newState;
 
     default:

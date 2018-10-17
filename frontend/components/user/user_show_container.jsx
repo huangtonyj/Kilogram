@@ -7,12 +7,11 @@ import UserShow from './user_show';
 const mapStateToProps = (state, ownProps) => {
 
   const userId = ownProps.match.params.userId;
-  const allPosts = state.entities.posts;
 
   return ({
+    currentUser: state.entities.users[state.session.id],
     user: state.entities.users[userId] || undefined,
-    posts: Object.keys(allPosts)
-      .map((postId) => allPosts[postId])
+    posts: Object.values(state.entities.posts)
       .filter((post) => post.authorId === parseInt(userId))
   });
 };

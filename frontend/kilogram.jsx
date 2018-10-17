@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloadedState = {
       entities: {
         users: {
-          [id]: currentUser,
+          // [id]: currentUser,
+          [id]: Object.assign(currentUser, { followees: {} })
         }
       },
       session: { id },
