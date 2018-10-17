@@ -31,11 +31,11 @@ const usersReducer = (state = {}, action) => {
       return Object.assign(action.payload.posts, newState);
 
     case LIKE_POST:
-      newState[action.like.post_id].likers[action.like.user_id] = true;
+      newState[action.like.post_id].likers[action.like.user_id] = "true";
       return newState;
 
     case LIKE_DELETE:
-      newState[action.like.post_id].likers[action.like.user_id] = false;
+      newState[action.like.post_id].likers[action.like.user_id] = "false";
       return newState;
 
     case SESSION_DELETE:

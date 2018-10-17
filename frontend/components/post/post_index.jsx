@@ -27,7 +27,7 @@ class PostIndex extends React.Component {
           key={post.id}
           post={post}
           author={this.props.users[post.authorId]}
-          currentuser={this.props.currentUser} // can't capitalize this!
+          currentUser={this.props.currentUser}
           postLike={this.props.postLike}
           deleteLike={this.props.deleteLike}
         />

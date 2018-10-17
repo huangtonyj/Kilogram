@@ -8,7 +8,7 @@ class PostIndexItem extends React.Component {
   }
 
   handleLike(postId) {
-    if (!this.props.post.likers[this.props.currentuser.id]) {
+    if (this.props.post.likers[this.props.currentUser.id] !== "true") {
       this.props.postLike(postId);
     }
   }
@@ -17,12 +17,17 @@ class PostIndexItem extends React.Component {
     this.props.deleteLike(postId);
   }
 
+  likesCounter() {
+    return Object.values(this.props.post.likers)
+      .filter(like => like === "true").length;
+  }
+
 
   render() {
     const { post, author, currentUser } = this.props;
 
     const likeButton = (
-      (this.props.post.likers[this.props.currentuser.id]) ? (
+      (this.props.post.likers[this.props.currentUser.id] === "true") ? (
         <a
           className="icon-heart-liked"
           onClick={() => this.handleUnlike(post.id)}
@@ -80,7 +85,7 @@ class PostIndexItem extends React.Component {
 
 
           <div className='post-index-item-likes'>
-            <span>{Object.values(post.likers).filter(like => like === "true").length} likes</span>
+            <span>{this.likesCounter()} likes</span>
           </div>
 
 
