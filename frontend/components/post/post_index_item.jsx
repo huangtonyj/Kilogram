@@ -8,13 +8,12 @@ class PostIndexItem extends React.Component {
   }
 
   handleLike(postId) {
-    console.log(`Like ${postId}`);
-    this.props.postLike(postId);
-
+    if (!this.props.post.likers[this.props.currentuser.id]) {
+      this.props.postLike(postId);
+    }
   }
 
   handleUnlike(postId) {
-    console.log(`Unlike ${postId}`);
     this.props.deleteLike(postId);
   }
 
@@ -26,12 +25,14 @@ class PostIndexItem extends React.Component {
       (this.props.post.likers[this.props.currentuser.id]) ? (
         <a
           className="icon-heart-liked"
-          onClick={() => this.handleUnlike(post.id)}>
+          onClick={() => this.handleUnlike(post.id)}
+        >
         </a>
       ) : (
           <a
             className="icon-heart"
-            onClick={() => this.handleLike(post.id)}>
+            onClick={() => this.handleLike(post.id)}
+          >
           </a>
         )
     );
@@ -64,6 +65,7 @@ class PostIndexItem extends React.Component {
           <img
             className="post-index-item-image"
             src={post.photoUrl}
+            onDoubleClick={() => this.handleLike(post.id)}
           />
 
 
