@@ -73,9 +73,9 @@ class UserShow extends React.Component {
             </div>
 
             <div className='user-show-profile-info-B'>
-              <span><b>152</b> posts</span>
-              <span><b>200</b> followers</span>
-              <span><b>265</b> following</span>
+              <span><b>{Object.values(this.props.posts).filter((post) => post.authorId == this.props.match.params.userId).length}</b> posts</span>
+              <span><b>{Object.values(this.props.user.followers).filter(Boolean).length}</b> followers</span>
+              <span><b>{Object.values(this.props.user.followees).filter(Boolean).length}</b> following</span>
             </div>
 
             <div className='user-show-profile-info-C'>

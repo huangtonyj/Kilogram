@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
       entities: {
         users: {
           // [id]: currentUser,
-          [id]: Object.assign(currentUser, { followees: {} })
+          [id]: Object.assign(currentUser,
+            { followees: {} },
+            { followers: {} })
         }
       },
       session: { id },
