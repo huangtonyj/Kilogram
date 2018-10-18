@@ -36,6 +36,7 @@ class UserShow extends React.Component {
   render() {
 
     if (!this.props.user) { return null; }
+    if (!this.props.user.description) { return null; }
 
     let followButton = (
       (this.props.currentUser.followees[this.props.match.params.userId]) ? (
