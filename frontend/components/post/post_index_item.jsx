@@ -42,6 +42,8 @@ class PostIndexItem extends React.Component {
         )
     );
 
+    console.log(post);
+
 
     return (
       <li>
@@ -59,8 +61,8 @@ class PostIndexItem extends React.Component {
                   <Link to={`/users/${author.id}`}>{author.username}</Link>
                 </p>
                 <p className='post-index-item-location'>
-                  San Francisco
-          </p>
+                  {post.location}
+                </p>
               </div>
             </div>
 

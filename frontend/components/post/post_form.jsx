@@ -5,6 +5,7 @@ class PostForm extends React.Component {
     super(props);
     this.state = {
       caption: '',
+      location: '',
       photoFile: null,
       photoUrl: null
     };
@@ -16,7 +17,6 @@ class PostForm extends React.Component {
   handleInput(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
-      console.log(this.state.caption);
     };
   }
 
@@ -37,6 +37,7 @@ class PostForm extends React.Component {
 
     const formData = new FormData();
     formData.append('post[caption]', this.state.caption);
+    formData.append('post[location]', this.state.location);
     formData.append('post[author_id]', this.props.authorId);
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
@@ -45,7 +46,8 @@ class PostForm extends React.Component {
     this.props.postPosts(formData).then(console.log("You posted it!"))
       .then(() => (
         this.setState({
-          caption: "",
+          caption: '',
+          location: '',
           photoFile: null,
           photoUrl: null
         })
@@ -79,27 +81,39 @@ class PostForm extends React.Component {
           <h2>Share a photo</h2>
 
           <div className='post-form-file-header'>
-            <div className='post-form-file-caption-container'>
-              <input type="text"
-                placeholder='caption'
-                onChange={this.handleInput('caption')}
-              />
-            </div>
+            {/* <div className='post-form-file-caption-container'> */}
+            <input type="text"
+              placeholder='Write a caption...'
+              onChange={this.handleInput('caption')}
+            />
+            {/* </div> */}
 
-            <div className='post-form-file-submit-button'>
-              <button> Submit Post</button >
-              {this.renderErrors()}
-            </div>
+            {/* <div className='post-form-file-caption-container'> */}
+            <input type="text"
+              placeholder='Add a location...'
+              onChange={this.handleInput('location')}
+            />
+            {/* </div> */}
           </div>
+
 
           <div className='post-form-file-upload-container'>
             <input type="file"
               onChange={this.handleFile}
+              class='file-input-button'
             />
+          </div>
 
-            <div>
-              {preview}
-            </div>
+          <div className='post-form-preview'>
+            {preview}
+          </div>
+
+          <div className='post-form-file-submit-button'>
+            <button> Submit Post</button >
+          </div>
+
+          <div class='sign-in-error'>
+            {this.renderErrors()}
           </div>
 
         </form >

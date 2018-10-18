@@ -1,7 +1,7 @@
 json.posts do
   @posts.each do |post|
     json.set! post.id do
-      json.extract! post, :id, :author_id, :caption, :created_at, :author
+      json.extract! post, :id, :author_id, :caption, :location, :created_at, :author
       json.photoUrl url_for(post.photo)
       json.likers do
         json.set! 0, :false
