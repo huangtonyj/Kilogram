@@ -14,10 +14,19 @@ json.posts do
 end
 
 json.users do
+  # extract all posts' authors
   @posts.each do |post|
     json.set! post.author_id do
       json.extract! post.author, :id, :username
     end
+    
+  # extract all comments' authors
+    post.comments.each do |comment|
+      json.set! comment.author_id do
+        json.extract! comment.author, :id, :username
+      end
+    end
+
   end
 end
 
