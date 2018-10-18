@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
       sign_in(@user)
       # User automatically follows itself upon registration.
       Follow.create({follower_id: @user.id, followee_id: @user.id})
-      render "api/users/show"
+      render "api/session/show"
     else
       render json: @user.errors.full_messages, status: 422
     end

@@ -2,19 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-// import kilogramLogo from './kilogram_logo.png';
-// import appleiOSAppStoreLogo from './ios_app_store.png';
-// import googlePlayStoreLogo from './google_play_store.png';
-
-// import kilogramLogo from '/app/assets/images/kilogram_logo.png';
-// import appleiOSAppStoreLogo from '/app/assets/images/ios_app_store.png';
-// import googlePlayStoreLogo from '/app/assets/images/google_play_store.png';
-
-// import kilogramLogo from '../../../app/assets/images/kilogram_logo.png';
-// import appleiOSAppStoreLogo from '../../../app/assets/images/ios_app_store.png';
-// import googlePlayStoreLogo from '../../../app/assets/images/google_play_store.png';
-
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -71,10 +58,6 @@ class SessionForm extends React.Component {
               src={window.images.Kilogram_logo}
               className="kilogram-logo"
             />
-            {/* <img
-              src={kilogramLogo}
-              className="kilogram-logo"
-            /> */}
 
             <div className='signin-input-container'>
               {/* <label className='signin-input-label'>
@@ -142,11 +125,9 @@ class SessionForm extends React.Component {
           <p>Get the app.</p>
           <div>
             <a>
-              {/* <img src={appleiOSAppStoreLogo} /> */}
               <img src={window.images.ios_app_store} />
             </a>
             <a>
-              {/* <img src={googlePlayStoreLogo} /> */}
               <img src={window.images.google_play_store} />
             </a>
           </div>

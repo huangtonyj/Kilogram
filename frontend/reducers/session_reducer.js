@@ -15,6 +15,9 @@ const sessionReducer = (state = _nullUser, action) => {
 
   switch (action.type) {
     case SESSION_POST:
+      return {
+        id: action.user.id
+      };
     case USER_POST:
       return {
         id: action.user.id
