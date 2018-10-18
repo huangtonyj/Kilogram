@@ -42,9 +42,6 @@ class PostIndexItem extends React.Component {
         )
     );
 
-    console.log(post);
-
-
     return (
       <li>
         <div className="post-index-item">

@@ -2,12 +2,12 @@
 #
 # Table name: posts
 #
-#  id          :bigint(8)        not null, primary key
-#  author_id   :integer          not null
-#  caption     :text
-#  location_id :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :bigint(8)        not null, primary key
+#  author_id  :integer          not null
+#  caption    :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  location   :string
 #
 
 require 'test_helper'

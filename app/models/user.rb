@@ -10,6 +10,7 @@
 #  description     :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  fullname        :string
 #
 
 class User < ApplicationRecord
@@ -51,6 +52,10 @@ class User < ApplicationRecord
   has_many :followees,
     through: :followee,
     source: :followee
+
+  has_many :comments,
+    foreign_key: :author_id,
+    class_name: :Comment
   
   
   # Auth
