@@ -16,7 +16,6 @@ class Api::PostsController < ApplicationController
 
     if @post.save
       render "api/posts/show"
-      # redirect_to '/'
     else
       render json: @post.errors.full_messages, status: 422
     end
