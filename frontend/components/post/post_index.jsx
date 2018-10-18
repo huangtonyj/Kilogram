@@ -30,6 +30,7 @@ class PostIndex extends React.Component {
           currentUser={this.props.currentUser}
           postLike={this.props.postLike}
           deleteLike={this.props.deleteLike}
+          postComment={this.props.postComment}
         />
       ).reverse()
     );

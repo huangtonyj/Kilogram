@@ -43,7 +43,7 @@ class PostForm extends React.Component {
       formData.append('post[photo]', this.state.photoFile);
     }
 
-    this.props.postPosts(formData).then(console.log("You posted it!"))
+    this.props.postPosts(formData)
       .then(() => (
         this.setState({
           caption: '',

@@ -5,6 +5,10 @@ class PostIndexItem extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      commentBody: ''
+    };
+    this.handlePostComment = this.handlePostComment.bind(this);
   }
 
   handleLike(postId) {
@@ -20,6 +24,25 @@ class PostIndexItem extends React.Component {
   likesCounter() {
     return Object.values(this.props.post.likers)
       .filter(like => like === "true").length;
+  }
+
+  handlePostComment(e) {
+    e.preventDefault();
+
+    const commentBody = this.state.commentBody;
+
+    const comment = ({
+      comment: commentBody,
+      post_id: this.props.post.id
+    });
+
+
+    this.props.postComment(comment)
+      .then(() =>
+        this.setState({
+          commentBody: ''
+        })
+      );
   }
 
 
@@ -121,10 +144,17 @@ class PostIndexItem extends React.Component {
               54 MINUTES AGO
         </p>
 
-            <form className='post-index-item-comment-form'>
+            <form
+              className='post-index-item-comment-form'
+              onSubmit={this.handlePostComment}
+            >
               <input
                 type="text"
                 placeholder="Add a comment..."
+                value={this.state.commentBody}
+                onChange={(e) => this.setState({
+                  commentBody: e.currentTarget.value
+                })}
               />
             </form>
           </div>
