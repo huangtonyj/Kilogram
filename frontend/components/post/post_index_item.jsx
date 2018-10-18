@@ -14,7 +14,7 @@ class PostIndexItem extends React.Component {
   }
 
   handleLike(postId) {
-    if (this.props.post.likers[this.props.currentUser.id] !== "true") {
+    if (this.props.currentPost.likers[this.props.currentUser.id] !== "true") {
       this.props.postLike(postId);
     }
   }
@@ -24,7 +24,7 @@ class PostIndexItem extends React.Component {
   }
 
   likesCounter() {
-    return Object.values(this.props.post.likers)
+    return Object.values(this.props.currentPost.likers)
       .filter(like => like === "true").length;
   }
 
@@ -49,19 +49,19 @@ class PostIndexItem extends React.Component {
 
 
   render() {
-    const { post, author, currentUser, comments, authors } = this.props;
+    const { currentPost, author, currentUser, comments, authors } = this.props;
 
     const likeButton = (
-      (post.likers[currentUser.id] === "true") ? (
+      (currentPost.likers[currentUser.id] === "true") ? (
         <a
           className="icon-heart-liked"
-          onClick={() => this.handleUnlike(post.id)}
+          onClick={() => this.handleUnlike(currentPost.id)}
         >
         </a>
       ) : (
           <a
             className="icon-heart"
-            onClick={() => this.handleLike(post.id)}
+            onClick={() => this.handleLike(currentPost.id)}
           >
           </a>
         )
@@ -83,7 +83,7 @@ class PostIndexItem extends React.Component {
                   <Link to={`/users/${author.id}`}>{author.username}</Link>
                 </p>
                 <p className='post-index-item-location'>
-                  {post.location}
+                  {currentPost.location}
                 </p>
               </div>
             </div>
@@ -93,8 +93,8 @@ class PostIndexItem extends React.Component {
 
           <img
             className="post-index-item-image"
-            src={post.photoUrl}
-            onDoubleClick={() => this.handleLike(post.id)}
+            src={currentPost.photoUrl}
+            onDoubleClick={() => this.handleLike(currentPost.id)}
           />
 
 
@@ -120,7 +120,7 @@ class PostIndexItem extends React.Component {
             </span>
 
             <span className='post-index-item-caption-caption'>
-              {post.caption}
+              {currentPost.caption}
             </span>
 
           </div>
@@ -128,6 +128,8 @@ class PostIndexItem extends React.Component {
 
           <div className='post-index-item-comment'>
             <CommentIndex
+              author={author}
+              currentPost={currentPost}
               comments={comments}
               authors={authors}
             />

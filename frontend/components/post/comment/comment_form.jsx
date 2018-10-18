@@ -32,19 +32,21 @@ class CommentForm extends React.Component {
   render() {
 
     return (
-      <form
-        className='post-index-item-comment-form'
-        onSubmit={this.handlePostComment}
-      >
-        <input
-          type="text"
-          placeholder="Add a comment..."
-          value={this.state.commentBody}
-          onChange={(e) => this.setState({
-            commentBody: e.currentTarget.value
-          })}
-        />
-      </form>
+      <div>
+        <form
+          className='post-index-item-comment-form'
+          onSubmit={this.handlePostComment}
+        >
+          <input
+            type="text"
+            placeholder="Add a comment..."
+            value={this.state.commentBody}
+            onChange={(e) => this.setState({
+              commentBody: e.currentTarget.value
+            })}
+          />
+        </form>
+      </div>
     );
   }
 }

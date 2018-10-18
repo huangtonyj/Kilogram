@@ -1,0 +1,33 @@
+.post-show-container {
+  width: 900px;
+  height: 450px;
+
+  margin: 20px;
+  border: 1px solid $light-gray;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.post-show-image-container {
+  width: 100%;
+  height: 100%;
+
+  flex: 2;
+}
+
+.post-show-info-container {
+  height: 100%;
+  background-color: white;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.post-show-info-container>div {
+  margin: 10px 20px;
+  padding: 5px;
+  border-bottom: 1px solid $light-gray;
+}

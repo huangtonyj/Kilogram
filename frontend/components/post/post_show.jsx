@@ -67,9 +67,11 @@ class PostShow extends React.Component {
             deleteLike={deleteLike}
           />
 
-          <p className='post-index-item-timestamp'>
-            Once upon a time, not so long ago.
-          </p>
+          <div>
+            <p className='post-index-item-timestamp'>
+              Once upon a time, not so long ago.
+            </p>
+          </div>
 
           <CommentForm
             currentPost={currentPost}

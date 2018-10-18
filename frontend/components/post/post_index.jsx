@@ -26,7 +26,7 @@ class PostIndex extends React.Component {
       this.props.posts.map((post) =>
         <PostIndexItem
           key={post.id}
-          post={post}
+          currentPost={post}
           author={this.props.users[post.authorId]}
           currentUser={this.props.currentUser}
           comments={Object.values(this.props.comments)
