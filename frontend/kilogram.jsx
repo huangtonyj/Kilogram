@@ -8,7 +8,6 @@ import { HashRouter } from 'react-router-dom';
 import App from './components/app.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
-
   // front end auth
   let store;
   if (window.currentUser) {
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloadedState = {
       entities: {
         users: {
-          // [id]: currentUser,
           [id]: Object.assign(currentUser,
             { followees: {} },
             { followers: {} })

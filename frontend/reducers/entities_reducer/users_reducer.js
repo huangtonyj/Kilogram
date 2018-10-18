@@ -34,6 +34,7 @@ const usersReducer = (state = {}, action) => {
     case USER_GET:
       return merge(newState, action.payload.users);
     case POSTS_GET:
+    case POST_GET:
       return merge(newState, action.payload.users);
 
     case SESSION_DELETE:

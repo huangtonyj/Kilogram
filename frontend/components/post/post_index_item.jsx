@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import CommentIndex from './comment/comment_index';
 
 class PostIndexItem extends React.Component {

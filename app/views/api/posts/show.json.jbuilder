@@ -3,6 +3,7 @@ json.posts do
     json.extract! @post, :id, :author_id, :caption, :location, :created_at
     json.photoUrl url_for(@post.photo)
     json.likers do
+      json.set! 0, :false # dummy, so likers is not undefined in the FE
       @post.likers.each do |liker|
         json.set! liker.id, :true
       end

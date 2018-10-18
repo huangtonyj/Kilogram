@@ -23,6 +23,7 @@ const commentsReducer = (state = {}, action) => {
   switch (action.type) {
 
     case POSTS_GET:
+    case POST_GET:
     case COMMENT_POST:
       return Object.assign(newState, action.payload.comments);
 
