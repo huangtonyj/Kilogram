@@ -100,7 +100,7 @@ class PostForm extends React.Component {
           <div className='post-form-file-upload-container'>
             <input type="file"
               onChange={this.handleFile}
-              class='file-input-button'
+              className='file-input-button'
             />
           </div>
 
@@ -112,7 +112,7 @@ class PostForm extends React.Component {
             <button> Submit Post</button >
           </div>
 
-          <div class='sign-in-error'>
+          <div className='sign-in-error'>
             {this.renderErrors()}
           </div>
 

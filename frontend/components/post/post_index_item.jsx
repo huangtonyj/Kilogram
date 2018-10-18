@@ -35,7 +35,7 @@ class PostIndexItem extends React.Component {
 
     const comment = ({
       comment: commentBody,
-      post_id: this.props.post.id
+      post_id: this.props.currentPost.id
     });
 
 
@@ -110,19 +110,6 @@ class PostIndexItem extends React.Component {
 
           <div className='post-index-item-likes'>
             <span>{this.likesCounter()} likes</span>
-          </div>
-
-
-          <div className='post-index-item-caption'>
-
-            <span className='post-index-item-caption-author'>
-              <Link to={`/users/${author.id}`}>{author.username} </Link>
-            </span>
-
-            <span className='post-index-item-caption-caption'>
-              {currentPost.caption}
-            </span>
-
           </div>
 
 
