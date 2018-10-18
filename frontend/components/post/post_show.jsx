@@ -68,7 +68,7 @@ class PostShow extends React.Component {
           />
 
           <div>
-            <p className='post-index-item-timestamp'>
+            <p className='post-timestamp'>
               Once upon a time, not so long ago.
             </p>
           </div>

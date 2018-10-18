@@ -152,14 +152,11 @@ hr {
 
 input {
   display: block;
-  // width: 500px;
   width: 90%;
   height: 20px;
   padding: 9px 0 7px 8px;
   font-size: 12px;
   background: transparent;
-  // z-index: 1;
-  // position: absolute;
   font-size: 10pt;
 }
 
@@ -177,10 +174,14 @@ input {
 }
 
 .main-content {
-  margin-top: 52px;
+  margin-top: 75px;
   display: flex;
 
   // justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+
+.footer {
+  margin-top: 30px;
 }
