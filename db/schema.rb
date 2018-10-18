@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_12_053246) do
+ActiveRecord::Schema.define(version: 2018_10_18_002544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,11 +53,10 @@ ActiveRecord::Schema.define(version: 2018_10_12_053246) do
   create_table "posts", force: :cascade do |t|
     t.integer "author_id", null: false
     t.text "caption"
-    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location"
     t.index ["author_id"], name: "index_posts_on_author_id"
-    t.index ["location_id"], name: "index_posts_on_location_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,6 +67,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_053246) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "fullname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true

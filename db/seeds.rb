@@ -8,25 +8,29 @@
 
 
 User.create!(
-  username: 'FutureTony',
   email: 'huangtonyj91@gmail.com',
+  fullname: 'Tony Huang'
+  username: 'FutureTony',
   password: 'starwars',
-  description: 'a7riii'
+  description: '📷  a7riii'
 )
 
 User.create!(
+  email: 'demoUser@b.c',
+  fullname: 'Demo User'
   username: 'demo',
-  email: 'a@b.c',
   password: 'starwars',
-  description: 'Welcome to the Kilogram demo'
+  description: 'Welcome to the Kilogram Demo'
 )
 
-Post.create!(
-  author_id: 1,
-  caption: "SF Golden Gate Bridge"
-)
+# Post.create!(
+#   author_id: 1,
+#   caption: "SF Golden Gate Bridge",
+#   location: 'San Francisco'
+# )
 
-Post.create!(
-  author_id: 2,
-  caption: "Boston"
-)
+# Post.create!(
+#   author_id: 2,
+#   caption: "Boston",
+#   location: 'Boston'
+# )
