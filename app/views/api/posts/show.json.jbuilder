@@ -14,6 +14,11 @@ json.users do
   json.set! @post.author_id do
     json.extract! @post.author, :id, :username
   end
+  @post.comments.each do |comment|
+    json.set! comment.author_id do
+      json.extract! comment.author, :id, :username
+    end
+  end
 end
 
 json.comments do
