@@ -2,7 +2,7 @@ import React from 'react';
 
 import PostActionBar from './post_action_bar';
 import PostImage from './post_image';
-import PostHeaader from './post_header';
+import PostHeader from './post_header';
 import CommentIndex from './comment/comment_index';
 import CommentForm from './comment/comment_form';
 
@@ -47,7 +47,7 @@ class PostShow extends React.Component {
         </div>
 
         <div className='post-show-info-container'>
-          <PostHeaader
+          <PostHeader
             currentPost={currentPost}
             author={author}
           />

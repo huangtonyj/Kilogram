@@ -8,10 +8,10 @@ const CommentIndex = ({ currentPost, author, authors, comments }) => {
     < div className='comment-index-container' >
       <ul>
         <li>
-          <span className='post-index-item-caption-author'>
+          <span className='bold-600 font-size-10'>
             <Link to={`/users/${author.id}`}>{author.username} </Link>
           </span>
-          <span className='post-index-item-caption-caption'>
+          <span className='font-size-10'>
             {currentPost.caption}
           </span>
         </li>

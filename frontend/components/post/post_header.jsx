@@ -2,16 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Postheader = ({ currentPost, author }) => (
-  <div>
-    <i className="fas fa-user "></i>
+  <div className='post-header'>
+    <div className='post-header-avatar'>
+      {/* <i className="fas fa-user "></i> */}
+    </div>
 
-    <p className='post-index-item-caption-author'>
-      <Link to={`/users/${author.id}`}>{author.username} </Link>
-    </p>
+    <div className='post-header-info'>
+      <p className='bold-600 font-size-10'>
+        <Link to={`/users/${author.id}`}>{author.username} </Link>
+      </p>
 
-    <p className='post-index-item-location'>
-      {currentPost.location}
-    </p>
+      <p className='post-header-info-location'>
+        {currentPost.location}
+      </p>
+    </div>
 
   </div>
 );

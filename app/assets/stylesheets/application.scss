@@ -27,23 +27,3 @@
 
 // Components
 @import "components/*";
-
-.root-div {
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  // margin-top: 50px;
-}
-
-body {
-  background-color: $lightest-gray;
-}
-
-.main-content {
-  margin-top: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}

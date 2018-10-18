@@ -16,7 +16,6 @@ class PostImage extends React.Component {
     return (
       <div>
         <img
-          className="post-index-item-image"
           src={this.props.currentPost.photoUrl}
           onDoubleClick={() => this.handleLike(this.props.currentPost.id)}
         />

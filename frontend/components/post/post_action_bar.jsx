@@ -54,8 +54,10 @@ class PostActionBar extends React.Component {
         </div>
 
 
-        <div className='post-index-item-likes'>
-          <span>{this.likesCounter()} likes</span>
+        <div className='post-likes-counter'>
+          <span className='bold-600 font-size-10'>
+            {this.likesCounter()} likes
+          </span>
         </div>
       </div>
 

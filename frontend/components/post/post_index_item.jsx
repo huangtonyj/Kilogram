@@ -2,7 +2,7 @@ import React from 'react';
 
 import PostActionBar from './post_action_bar';
 import PostImage from './post_image';
-import PostHeaader from './post_header';
+import PostHeader from './post_header';
 import CommentIndex from './comment/comment_index';
 import CommentForm from './comment/comment_form';
 
@@ -22,8 +22,8 @@ class PostIndexItem extends React.Component {
     if (!this.props.currentPost) { return null; }
 
     return (
-      <div className=''>
-        <PostHeaader
+      <div className='post-index-item'>
+        <PostHeader
           currentPost={currentPost}
           author={author}
         />
@@ -34,30 +34,32 @@ class PostIndexItem extends React.Component {
           postLike={postLike}
         />
 
-        <PostActionBar
-          currentUser={currentUser}
-          currentPost={currentPost}
-          postLike={postLike}
-          deleteLike={deleteLike}
-        />
+        <div className='post-index-footer'>
+          <PostActionBar
+            currentUser={currentUser}
+            currentPost={currentPost}
+            postLike={postLike}
+            deleteLike={deleteLike}
+          />
 
-        <CommentIndex
-          currentPost={currentPost}
-          author={author}
-          authors={users}
-          comments={comments}
-        />
+          <CommentIndex
+            currentPost={currentPost}
+            author={author}
+            authors={users}
+            comments={comments}
+          />
 
-        <div>
-          <p className='post-timestamp'>
-            Once upon a time, not so long ago.
+          <div>
+            <p className='post-timestamp'>
+              Once upon a time, not so long ago.
             </p>
-        </div>
+          </div>
 
-        <CommentForm
-          currentPost={currentPost}
-          postComment={postComment}
-        />
+          <CommentForm
+            currentPost={currentPost}
+            postComment={postComment}
+          />
+        </div>
       </div>
     );
   }
