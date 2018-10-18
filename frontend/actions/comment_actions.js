@@ -5,9 +5,9 @@ export const COMMENT_DELETE = 'COMMENT_DELETE';
 export const COMMENT_PATCH = 'COMMENT_PATCH';
 
 
-export const commentPost = (comment) => ({
+export const commentPost = (payload) => ({
   type: COMMENT_POST,
-  comment
+  payload
 });
 
 // export const likeDelete = (like) => ({
@@ -23,7 +23,7 @@ export const commentPost = (comment) => ({
 
 export const ajaxCommentPost = (comment) => dispatch => (
   CommentAPIUtil.ajaxCommentPost(comment).then(
-    (comment) => dispatch(commentPost(comment))
+    (payload) => dispatch(commentPost(payload))
   )
 );
 
