@@ -7,7 +7,7 @@ import { ajaxCommentPost, ajaxCommentDelete, ajaxCommentPatch } from '../../acti
 import PostIndex from './post_index';
 
 
-const mapStateToProps = ({ entities: { posts, users }, session }) => {
+const mapStateToProps = ({ entities: { posts, users, comments }, session }) => {
 
   const followedPosts = users[session.id].followees ?
     Object.values(posts).filter((post) => users[session.id].followees[post.authorId]
@@ -19,6 +19,7 @@ const mapStateToProps = ({ entities: { posts, users }, session }) => {
     currentUser: users[session.id],
     users: users,
     posts: followedPosts,
+    comments: comments
   });
 };
 

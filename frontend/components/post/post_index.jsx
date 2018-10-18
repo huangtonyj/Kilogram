@@ -15,6 +15,7 @@ class PostIndex extends React.Component {
     // this.setState({ loading: false });
   }
 
+
   render() {
 
     // if (this.state.loading) return <h3>loading...</h3>;
@@ -28,6 +29,10 @@ class PostIndex extends React.Component {
           post={post}
           author={this.props.users[post.authorId]}
           currentUser={this.props.currentUser}
+          comments={Object.values(this.props.comments)
+            .filter((comment) => (comment.postId === post.id))}
+          authors={this.props.users} // maybe a more elaborate selector to select only the associate comment authors
+
           postLike={this.props.postLike}
           deleteLike={this.props.deleteLike}
           postComment={this.props.postComment}

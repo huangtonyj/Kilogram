@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentIndex from './comment/comment_index';
 
 class PostIndexItem extends React.Component {
 
@@ -47,10 +48,10 @@ class PostIndexItem extends React.Component {
 
 
   render() {
-    const { post, author, currentUser } = this.props;
+    const { post, author, currentUser, comments, authors } = this.props;
 
     const likeButton = (
-      (this.props.post.likers[this.props.currentUser.id] === "true") ? (
+      (post.likers[currentUser.id] === "true") ? (
         <a
           className="icon-heart-liked"
           onClick={() => this.handleUnlike(post.id)}
@@ -125,39 +126,29 @@ class PostIndexItem extends React.Component {
 
 
           <div className='post-index-item-comment'>
-            <ul>
-              <li>
-                <span className='comment-author'>author1 </span>
-                <span className='comment-body'>Comment1</span>
-              </li>
-              <li>
-                <span className='comment-author'>author2  </span>
-                <span className='comment-body'>Comment2</span>
-              </li>
-              <li>
-                <span className='comment-author'>author3  </span>
-                <span className='comment-body'>Comment3</span>
-              </li>
-            </ul>
+            <CommentIndex
+              comments={comments}
+              authors={authors}
+            />
 
             <p className='post-index-item-timestamp'>
-              54 MINUTES AGO
-        </p>
-
-            <form
-              className='post-index-item-comment-form'
-              onSubmit={this.handlePostComment}
-            >
-              <input
-                type="text"
-                placeholder="Add a comment..."
-                value={this.state.commentBody}
-                onChange={(e) => this.setState({
-                  commentBody: e.currentTarget.value
-                })}
-              />
-            </form>
+              Once upon a time, sometime ago.
+            </p>
           </div>
+
+          <form
+            className='post-index-item-comment-form'
+            onSubmit={this.handlePostComment}
+          >
+            <input
+              type="text"
+              placeholder="Add a comment..."
+              value={this.state.commentBody}
+              onChange={(e) => this.setState({
+                commentBody: e.currentTarget.value
+              })}
+            />
+          </form>
         </div>
       </li >
     );
