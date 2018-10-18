@@ -14,11 +14,13 @@ class PostImage extends React.Component {
 
   render() {
     return (
-      <img
-        className="post-index-item-image"
-        src={this.props.currentPost.photoUrl}
-        onDoubleClick={() => this.handleLike(this.props.currentPost.id)}
-      />
+      <div>
+        <img
+          className="post-index-item-image"
+          src={this.props.currentPost.photoUrl}
+          onDoubleClick={() => this.handleLike(this.props.currentPost.id)}
+        />
+      </div>
     );
   }
 }

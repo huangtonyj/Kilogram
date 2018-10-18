@@ -1,8 +1,18 @@
 import { connect } from 'react-redux';
 
-import { ajaxPostsGet, ajaxPostGet } from '../../actions/post_actions';
-import { ajaxLikePost, ajaxLikeDelete } from '../../actions/like_actions';
-import { ajaxCommentPost, ajaxCommentDelete, ajaxCommentPatch } from '../../actions/comment_actions';
+import {
+  ajaxPostsGet,
+  ajaxPostGet
+} from '../../actions/post_actions';
+import {
+  ajaxLikePost,
+  ajaxLikeDelete
+} from '../../actions/like_actions';
+import {
+  ajaxCommentPost,
+  ajaxCommentDelete,
+  ajaxCommentPatch
+} from '../../actions/comment_actions';
 
 import PostIndex from './post_index';
 
@@ -10,8 +20,9 @@ import PostIndex from './post_index';
 const mapStateToProps = ({ entities: { posts, users, comments }, session }) => {
 
   const followedPosts = users[session.id].followees ?
-    Object.values(posts).filter((post) => users[session.id].followees[post.authorId]
-    ) : (
+    Object.values(posts)
+      .filter((post) => users[session.id].followees[post.authorId]
+      ) : (
       []
     );
 
