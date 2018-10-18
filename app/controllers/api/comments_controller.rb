@@ -5,10 +5,6 @@ class Api::CommentsController < ApplicationController
     @comment.author_id = current_user.id
 
     if @comment.save
-      # render json: 
-      #   {post_id: @comment.post_id, 
-      #   user_id: @comment.author_id,
-      #   comment: @comment.comment}
       render "api/comments/show"
     else 
       render json: @comment.errors.full_messages, status: 422

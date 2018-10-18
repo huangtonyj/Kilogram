@@ -26,9 +26,6 @@ const commentsReducer = (state = {}, action) => {
     case COMMENT_POST:
       return Object.assign(newState, action.payload.comments);
 
-      // debugger
-      // return state;
-
     case SESSION_DELETE:
       return {};
 

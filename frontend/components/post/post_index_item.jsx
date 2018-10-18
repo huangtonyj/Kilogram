@@ -132,7 +132,7 @@ class PostIndexItem extends React.Component {
             />
 
             <p className='post-index-item-timestamp'>
-              Once upon a time, sometime ago.
+              Once upon a time, not so long ago.
             </p>
           </div>
 
