@@ -6,11 +6,11 @@ class UserForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: '',
       email: '',
       fullname: '',
-      description: ''
+      username: '',
+      password: '',
+      description: 'Hello, Welcome to Kilogram :)'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
@@ -83,9 +83,6 @@ class UserForm extends React.Component {
             <div className="signup-form">
 
               <div className='signin-input-container'>
-                {/* <label className='signin-input-label'>
-                  Email
-                </label> */}
                 <input type="text"
                   value={this.state.email}
                   onChange={this.update('email')}
@@ -95,21 +92,15 @@ class UserForm extends React.Component {
               </div>
 
               <div className='signin-input-container'>
-                {/* <label className='signin-input-label'>
-                  Full Name
-                 </label> */}
                 <input type="text"
-                  // value={this.state.fullname}
-                  // onChange={this.update('fullname')}
+                  value={this.state.fullname}
+                  onChange={this.update('fullname')}
                   className="signin-input input"
                   placeholder='Full Name'
                 />
               </div>
 
               <div className='signin-input-container'>
-                {/* <label className='signin-input-label'>
-                  Username
-                </label> */}
                 <input type="text"
                   value={this.state.username}
                   onChange={this.update('username')}
@@ -119,9 +110,6 @@ class UserForm extends React.Component {
               </div>
 
               <div className='signin-input-container'>
-                {/* <label className='signin-input-label'>
-                  Password
-                </label> */}
                 <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}

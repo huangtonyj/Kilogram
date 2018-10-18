@@ -28,7 +28,7 @@ class NavBar extends React.Component {
         </div>
 
         <div className='navbar-greeting'>
-          <p>Hello, {this.props.currentUser.username}!</p>
+          <p>Hello, {this.props.currentUser.fullname}!</p>
         </div>
 
         <div className='navbar-links'>

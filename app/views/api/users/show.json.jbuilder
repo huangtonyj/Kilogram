@@ -1,6 +1,6 @@
 json.users do
   json.set! @user.id do
-    json.extract! @user, :id, :username, :description
+    json.extract! @user, :id, :username, :description, :fullname
     json.followees do
       @user.followees.each do |followee|
         json.set! followee.id, :true

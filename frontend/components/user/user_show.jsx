@@ -79,6 +79,7 @@ class UserShow extends React.Component {
             </div>
 
             <div className='user-show-profile-info-C'>
+              <p>{this.props.user.fullname}</p><br />
               <p>{this.props.user.description}</p>
             </div>
 
