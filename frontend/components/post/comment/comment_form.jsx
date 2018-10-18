@@ -32,9 +32,8 @@ class CommentForm extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className='comment-form'>
         <form
-          className='post-index-item-comment-form'
           onSubmit={this.handlePostComment}
         >
           <input

@@ -10,7 +10,7 @@ import PostShow from './post_show';
 const mapStateToProps = ({ entities: { posts, users, comments }, session }, ownProps) => {
 
   const currentPost = posts[ownProps.match.params.postId];
-  if (!currentPost) { return null; }
+  if (!currentPost) return {};
 
   return ({
     currentUser: users[session.id],

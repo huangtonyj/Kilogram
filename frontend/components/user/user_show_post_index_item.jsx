@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const UserShowPostIndexItem = ({ post, author }) => (
+const UserShowPostIndexItem = ({ post, author, history }) => (
   <li>
-    <img
-      className="user-show-index-item-image"
-      src={post.photoUrl}
-    />
+    <Link to={`/posts/${post.id}`}>
+      <img
+        className="user-show-index-item-image"
+        src={post.photoUrl}
+      />
+    </Link>
   </li>
 );
 
