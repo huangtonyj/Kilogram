@@ -8,7 +8,6 @@ class Api::UsersController < ApplicationController
       # User automatically follows itself upon registration.
       Follow.create({follower_id: @user.id, followee_id: @user.id})
       Follow.create({follower_id: 1, followee_id: @user.id})
-      Follow.create({follower_id: 2, followee_id: @user.id})
       Follow.create({follower_id: @user.id, followee_id: 1})
       
       render "api/session/show"
