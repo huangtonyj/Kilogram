@@ -86,3 +86,9 @@ ActiveRecord::Schema.define(version: 2018_10_18_030616) do
   end
 
 end
+
+
+Comment.destroy_all
+Comment.reset_sequence_name
+
+Comment.create!({post_id: 10, parent_comment_id: , author_id: 3, comment: Nice shot!'})
