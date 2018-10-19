@@ -23,7 +23,6 @@ const mapDispatchToProps = dispatch => {
     postFollow: (followeeId) => dispatch(ajaxFollowPost(followeeId)),
     deleteFollow: (followeeId) => dispatch(ajaxFollowDelete(followeeId)),
 
-    // openModal: () => dispatch(openModal('PostShow')),
     openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
   });

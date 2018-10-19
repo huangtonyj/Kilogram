@@ -32,6 +32,9 @@ class PostIndexItem extends React.Component {
           currentUser={currentUser}
           currentPost={currentPost}
           postLike={postLike}
+
+          openModal={this.props.openModal}
+          closeModal={this.props.closeModal}
         />
 
         <div className='post-index-footer'>

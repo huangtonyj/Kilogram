@@ -17,6 +17,7 @@ class PostImage extends React.Component {
       <div>
         <img
           src={this.props.currentPost.photoUrl}
+          onClick={() => this.props.openModal({ modal: 'PostShow', postId: this.props.currentPost.id })}
           onDoubleClick={() => this.handleLike(this.props.currentPost.id)}
         />
       </div>

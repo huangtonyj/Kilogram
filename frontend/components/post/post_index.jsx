@@ -29,6 +29,9 @@ class PostIndex extends React.Component {
           postLike={this.props.postLike}
           deleteLike={this.props.deleteLike}
           postComment={this.props.postComment}
+
+          openModal={this.props.openModal}
+          closeModal={this.props.closeModal}
         />
       ).reverse()
     );

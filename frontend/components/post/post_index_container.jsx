@@ -13,6 +13,7 @@ import {
   ajaxCommentDelete,
   ajaxCommentPatch
 } from '../../actions/comment_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 import PostIndex from './post_index';
 
@@ -38,7 +39,10 @@ const mapDispatchToProps = dispatch => ({
   getPosts: () => dispatch(ajaxPostsGet()),
   postLike: (postId) => dispatch(ajaxLikePost(postId)),
   deleteLike: (postId) => dispatch(ajaxLikeDelete(postId)),
-  postComment: (comment) => dispatch(ajaxCommentPost(comment))
+  postComment: (comment) => dispatch(ajaxCommentPost(comment)),
+
+  openModal: (modal) => dispatch(openModal(modal)),
+  closeModal: () => dispatch(closeModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostIndex);
