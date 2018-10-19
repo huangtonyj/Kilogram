@@ -2,8 +2,9 @@ import React from 'react';
 import CommentIndexItem from './comment_index_item';
 import { Link } from 'react-router-dom';
 
-const CommentIndex = ({ currentPost, author, authors, comments }) => {
+const CommentIndex = ({ currentPost, author, users, comments }) => {
 
+  if (!users) { return null; }
   return (
     < div className='comment-index-container' >
       <ul>
@@ -22,7 +23,7 @@ const CommentIndex = ({ currentPost, author, authors, comments }) => {
             <CommentIndexItem
               key={comment.id}
               comment={comment}
-              author={author}
+              author={users[comment.authorId]}
             />
           ))
         }

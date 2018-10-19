@@ -48,7 +48,7 @@ class PostIndexItem extends React.Component {
           <CommentIndex
             currentPost={currentPost}
             author={author}
-            authors={users}
+            users={users}
             comments={comments}
           />
 

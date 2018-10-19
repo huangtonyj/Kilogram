@@ -14,6 +14,7 @@ class PostIndex extends React.Component {
   render() {
     if (!this.props.posts[0]) return null;
     if (!this.props.posts[0].likers) return null;
+    if (Object.keys(this.props.users).length < 2) return null;
 
     const postIndexItem = (
       this.props.posts.map((post) =>
@@ -22,7 +23,7 @@ class PostIndex extends React.Component {
           currentUser={this.props.currentUser}
           currentPost={post}
           author={this.props.users[post.authorId]}
-          authors={this.props.users} // maybe a more elaborate selector to select only the associate comment authors
+          users={this.props.users} // maybe a more elaborate selector to select only the associate comment authors
           comments={Object.values(this.props.comments)
             .filter((comment) => (comment.postId === post.id))}
 

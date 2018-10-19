@@ -28,3 +28,14 @@ json.posts do
     end
   end
 end
+
+
+json.comments do
+  @user.posts.each do |post|
+    post.comments.each do |comment|
+      json.set! comment.id do
+        json.extract! comment, :id, :post_id, :parent_comment_id, :author_id, :comment
+      end
+    end
+  end
+end

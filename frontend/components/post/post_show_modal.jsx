@@ -23,6 +23,7 @@ class PostShow extends React.Component {
       postComment } = this.props;
 
     if (!this.props.currentPost) { return null; }
+    if (Object.keys(users).length < 2) return null;
 
     const author = users[currentPost.authorId];
 
@@ -45,7 +46,7 @@ class PostShow extends React.Component {
           <CommentIndex
             currentPost={currentPost}
             author={author}
-            authors={users}
+            users={users}
             comments={comments}
           />
 

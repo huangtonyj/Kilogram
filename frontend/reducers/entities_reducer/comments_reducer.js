@@ -14,6 +14,10 @@ import {
   POST_GET,
   POST_POST
 } from '../../actions/post_actions';
+import {
+  USER_POST,
+  USER_GET
+} from '../../actions/user_actions.js';
 
 
 const commentsReducer = (state = {}, action) => {
@@ -22,6 +26,7 @@ const commentsReducer = (state = {}, action) => {
 
   switch (action.type) {
 
+    case USER_GET:
     case POSTS_GET:
     case POST_GET:
     case COMMENT_POST:

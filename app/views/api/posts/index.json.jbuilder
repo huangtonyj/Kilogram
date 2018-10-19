@@ -4,7 +4,7 @@ json.posts do
       json.extract! post, :id, :author_id, :caption, :location, :created_at, :author
       json.photoUrl url_for(post.photo)
       json.likers do
-        json.set! 0, :false
+        json.set! 0, :false # to initialize an empty liker object
         post.likers.each do |liker|
           json.set! liker.id, :true
         end
