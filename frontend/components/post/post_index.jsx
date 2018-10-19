@@ -14,7 +14,7 @@ class PostIndex extends React.Component {
   render() {
     if (!this.props.posts[0]) return null;
     if (!this.props.posts[0].likers) return null;
-    if (Object.keys(this.props.users).length < 2) return null;
+    if (Object.keys(this.props.users).length < 1) return null;
 
     const postIndexItem = (
       this.props.posts.map((post) =>

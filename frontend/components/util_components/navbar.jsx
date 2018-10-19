@@ -33,9 +33,9 @@ class NavBar extends React.Component {
 
         <div className='navbar-links'>
           <ul>
-            <li><button onClick={this.props.signOut} className='icon-profile'>Sign Out</button></li>
-            <li><Link to={`/posts/new`} className='icon-profile'>Upload</Link></li>
-            <li><Link to={`/users/${this.props.currentUser.id}`} className='icon-profile'>Profile</Link></li>
+            <li><button onClick={this.props.signOut} className='icon-setting'></button></li>
+            <li><Link to={`/posts/new`} className='icon-upload'></Link></li>
+            <li><Link to={`/users/${this.props.currentUser.id}`} className='icon-profile'></Link></li>
           </ul>
         </div>
       </div>
