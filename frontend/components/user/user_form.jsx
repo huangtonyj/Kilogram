@@ -25,8 +25,7 @@ class UserForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.signUp(user)
-      .then((e).console.log(e));
+    this.props.signUp(user);
   }
 
   renderErrors() {

@@ -24,8 +24,6 @@ export const ajaxSessionPost = (user) => dispatch => (
   SessionAPIUtil.ajaxSessionPost(user).then(
     (user) => dispatch(sessionPost(user)),
     (error) => dispatch(sessionError(error.responseJSON))
-  ).then(
-    (user) => console.log(user)
   )
 );
 
