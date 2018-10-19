@@ -12,6 +12,7 @@ json.posts do
 end
 
 json.users do
+  debugger
   json.set! @post.author_id do
     json.extract! @post.author, :id, :username
   end
