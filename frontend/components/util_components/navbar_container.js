@@ -8,6 +8,10 @@ import {
 import {
   ajaxUserGet
 } from '../../actions/user_actions';
+import {
+  openModal,
+  closeModal
+} from '../../actions/modal_actions';
 import NavBar from './navbar';
 
 const mapStateToProps = ({
@@ -21,7 +25,10 @@ const mapStateToProps = ({
 
 const mapDispatchToProps = (dispatch) => ({
   signOut: () => dispatch(ajaxSessionDelete()),
-  getCurrentUserInfo: (id) => dispatch(ajaxUserGet(id))
+  getCurrentUserInfo: (id) => dispatch(ajaxUserGet(id)),
+
+  openModal: (modal) => dispatch(openModal(modal)),
+  closeModal: () => dispatch(closeModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

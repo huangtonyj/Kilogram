@@ -25,7 +25,7 @@ class PostActionBar extends React.Component {
   render() {
     const { currentUser, currentPost } = this.props;
     if (!this.props.currentPost) { return null; }
-
+    // debugger
     const likeButton = (
       (currentPost.likers[currentUser.id] === "true") ? (
         <a
