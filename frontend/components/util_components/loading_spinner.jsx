@@ -11,9 +11,6 @@ const override = css`
 class LoadingSpinner extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   loading: true
-    // };
   }
   render() {
     return (
@@ -23,7 +20,6 @@ class LoadingSpinner extends React.Component {
           sizeUnit={"px"}
           size={150}
           color={'#3897f0'}
-        // loading={this.state.loading}
         />
       </div>
     );

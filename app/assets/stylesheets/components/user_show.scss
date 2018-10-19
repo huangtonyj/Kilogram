@@ -79,6 +79,6 @@
   max-height: 100%;
   z-index: -1;
 
-  // object-fit: cover; // takes forever to load in Chrome, use Safari
+  object-fit: cover; // takes forever to load in Chrome, use Safari
   display: inline-block;
 }
