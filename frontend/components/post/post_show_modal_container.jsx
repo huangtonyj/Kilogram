@@ -4,14 +4,14 @@ import { ajaxPostsGet, ajaxPostGet } from '../../actions/post_actions';
 import { ajaxLikePost, ajaxLikeDelete } from '../../actions/like_actions';
 import { ajaxCommentPost, ajaxCommentDelete, ajaxCommentPatch } from '../../actions/comment_actions';
 
-import PostShow from './post_show';
+import PostShowModal from './post_show_modal';
 
 
 const mapStateToProps = ({ entities: { posts, users, comments }, session, ui: { modal } }, ownProps) => {
 
 
 
-  const currentPost = posts[ownProps.match.params.postId];
+  const currentPost = posts[modal.postId]
   if (!currentPost) return {};
 
   return ({
@@ -32,4 +32,4 @@ const mapDispatchToProps = dispatch => ({
   postComment: (comment) => dispatch(ajaxCommentPost(comment)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostShow);
+export default connect(mapStateToProps, mapDispatchToProps)(PostShowModal);

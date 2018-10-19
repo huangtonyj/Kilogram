@@ -89,7 +89,10 @@ class UserShow extends React.Component {
         </div>
 
         <UserShowPostIndex
-          posts={this.props.posts} />
+          posts={this.props.posts}
+          openModal={this.props.openModal}
+          closeModal={this.props.closeModal}
+        />
       </div>
     );
   }
