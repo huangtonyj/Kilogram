@@ -1,5 +1,5 @@
 import React from 'react';
-
+import LoadingSpinner from '../util_components/loading_spinner';
 class PostForm extends React.Component {
   constructor(props) {
     super(props);
@@ -7,7 +7,9 @@ class PostForm extends React.Component {
       caption: '',
       location: '',
       photoFile: null,
-      photoUrl: null
+      photoUrl: null,
+
+      loading: false
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleFile = this.handleFile.bind(this);
@@ -43,13 +45,17 @@ class PostForm extends React.Component {
       formData.append('post[photo]', this.state.photoFile);
     }
 
+    this.setState({ loading: true });
+
     this.props.postPosts(formData)
       .then(() => (
         this.setState({
           caption: '',
           location: '',
           photoFile: null,
-          photoUrl: null
+          photoUrl: null,
+
+          loading: false,
         })
       ))
       .then(() => {
@@ -74,6 +80,8 @@ class PostForm extends React.Component {
 
   render() {
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} width='300px' /> : null;
+
+    if (this.state.loading) { return <LoadingSpinner />; }
 
     return (
       <div className='post-form'>
