@@ -69,7 +69,7 @@ class PostShow extends React.Component {
 
           <div>
             <p className='post-timestamp'>
-              Once upon a time, not so long ago.
+              {Date(currentPost.createdAt).slice(4, 15)}
             </p>
           </div>
 
