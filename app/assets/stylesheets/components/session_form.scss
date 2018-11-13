@@ -68,10 +68,22 @@
   color: #999;
 }
 
-.demo-login-container {
+.demo-login-container > button{
   color: #385185;
   font-weight: bold;
   font-size: 10.5pt;
+  padding: 10px;
+  border-radius: 5px;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    50% { transform: rotate(0deg) scale(1.1); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .sign-in-error {
