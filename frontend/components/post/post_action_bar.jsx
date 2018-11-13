@@ -47,10 +47,10 @@ class PostActionBar extends React.Component {
         <div className='post-index-item-actionbar'>
           <div>
             {likeButton}
-            {/* <a href="" className="icon-comment"></a> */}
-            {/* <a className="icon-share"></a> */}
+            <a className="icon-comment"></a>
+            <a className="icon-share"></a>
           </div>
-          {/* <a className="icon-bookmark"></a> */}
+          <a className="icon-bookmark"></a>
         </div>
 
 
