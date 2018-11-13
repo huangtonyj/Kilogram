@@ -43,9 +43,9 @@ class PostForm extends React.Component {
     formData.append('post[author_id]', this.props.authorId);
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
+      this.setState({ loading: true });
     }
 
-    this.setState({ loading: true });
 
     this.props.postPosts(formData)
       .then(() => (
