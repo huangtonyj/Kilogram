@@ -82,12 +82,14 @@
   background-size: 437px 386px;
 }
 
-.fas, .far {
+.fas, .far, .fab {
   font-size: 25px;
   cursor: pointer;
   margin: 5px;
 }
 
-.fas:hover, .far:hover {
+.fas:hover,
+.far:hover,
+.fab:hover {
   color: $blue
 }

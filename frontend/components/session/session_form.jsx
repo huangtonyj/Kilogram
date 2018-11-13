@@ -47,81 +47,56 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    return (
-      <div className="signin-form-container">
+    return <div className="signin-form-container">
         <div className="signin-form">
           <form onSubmit={this.handleSubmit} className="signin-form-box">
+            <img src={window.images.Kilogram_logo} className="kilogram-logo" />
 
-
-
-            <img
-              src={window.images.Kilogram_logo}
-              className="kilogram-logo"
-            />
-
-            <div className='signin-input-container'>
+            <div className="signin-input-container">
               {/* <label className='signin-input-label'>
                 Username
               </label> */}
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="signin-input input"
-                placeholder='Username'
-              />
+              <input type="text" value={this.state.username} onChange={this.update("username")} className="signin-input input" placeholder="Username" />
             </div>
 
-            <div className='signin-input-container'>
+            <div className="signin-input-container">
               {/* <label className='signin-input-label'>
                 Password
               </label> */}
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="signin-input input"
-                placeholder='Password'
-              />
+              <input type="password" value={this.state.password} onChange={this.update("password")} className="signin-input input" placeholder="Password" />
             </div>
 
-
-            <button type="submit"
-              value="Log In"
-              className="session-submit-button">
+            <button type="submit" value="Log In" className="session-submit-button">
               Log in
             </button>
           </form>
 
-          <div className='or-divider'>
-            <div className='horizontal-line'></div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div className='horizontal-line'></div>
+          <div className="or-divider">
+            <div className="horizontal-line" />
+            <span>
+              &nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <div className="horizontal-line" />
           </div>
 
-
-          <div className='demo-login-container'>
-            <button onClick={this.demoLogin}>
-              Log in with Demo User
-              </button>
+          <div className="demo-login-container">
+            <button onClick={this.demoLogin}>Log in with Demo User</button>
           </div>
 
-          <div className='sign-in-error'>
-            {this.renderErrors()}
-          </div>
+          <div className="sign-in-error">{this.renderErrors()}</div>
 
-          <div className='forgot-password'>
-            <a href='#'>Forgot password?</a>
+          <div className="forgot-password">
+            <a href="#">Forgot password?</a>
           </div>
-
         </div>
 
-
-        <div className='sign-up-container'>
+        <div className="sign-up-container">
           <span>
-            Don't have an account? <Link to='/signup'>Sign up</Link>
+            Don't have an account? <Link to="/signup">Sign up</Link>
           </span>
         </div>
 
-        <div className='get-the-app-container'>
+        <div className="get-the-app-container">
           <p>Get the app.</p>
           <div>
             <a>
@@ -133,8 +108,7 @@ class SessionForm extends React.Component {
           </div>
         </div>
 
-      </div>
-    );
+      </div>;
   }
 }
 
