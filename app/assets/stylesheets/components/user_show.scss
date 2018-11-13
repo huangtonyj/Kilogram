@@ -12,7 +12,13 @@
 
 .user-show-avatar-container {
   margin: 15px;
-  flex: 1
+  flex: 1;
+  border: 1px solid $gray;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-show-avatar {
@@ -20,6 +26,10 @@
   height: 145px;
   border-radius: 50%;
   background-color: $gray;
+}
+
+#user-show-avatar{
+  font-size: 80px;
 }
 
 .user-show-profile-info {

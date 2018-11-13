@@ -60,9 +60,9 @@ class UserShow extends React.Component {
         <div className='user-show-profile-header'>
 
           <div className='user-show-avatar-container'>
-            <div className='user-show-avatar'>
-
-            </div>
+            {/* <div className='user-show-avatar'> */}
+              <i id="user-show-avatar" className="far fa-user" />
+            {/* </div> */}
           </div>
 
           <div className='user-show-profile-info'>
