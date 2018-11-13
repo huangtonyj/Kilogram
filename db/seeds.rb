@@ -15,7 +15,7 @@ a = Post.new({caption: 'Portland Light House', location: 'Portland. ME', author_
 a.photo.attach(io: File.open('app/assets/images/seed_images/1_6.jpeg'), filename: '1_6.jpeg')
 a.save!
 
-a = Post.new({caption: 'Boomer staring into the flames', location: '0', author_id: 1})
+a = Post.new({caption: 'Boomer staring into the flames', location: '', author_id: 1})
 a.photo.attach(io: File.open('app/assets/images/seed_images/1_11.jpeg'), filename: '1_11.jpeg')
 a.save!
 
@@ -107,15 +107,15 @@ a = Post.new({caption: 'Boston from Longsfellow', location: 'Boston, MA', author
 a.photo.attach(io: File.open('app/assets/images/seed_images/1_7.jpeg'), filename: '1_7.jpeg')
 a.save!
 
-a = Post.new({caption: 'Lets pool', location: '0', author_id: 2})
+a = Post.new({caption: 'Lets pool', location: '', author_id: 2})
 a.photo.attach(io: File.open('app/assets/images/seed_images/2_1.jpeg'), filename: '2_1.jpeg')
 a.save!
 
-a = Post.new({caption: 'Starry light bulb', location: '0', author_id: 1})
+a = Post.new({caption: 'Starry light bulb', location: '', author_id: 1})
 a.photo.attach(io: File.open('app/assets/images/seed_images/1_12.jpeg'), filename: '1_12.jpeg')
 a.save!
 
-a = Post.new({caption: 'Merry Christmas', location: '0', author_id: 3})
+a = Post.new({caption: 'Merry Christmas', location: '', author_id: 3})
 a.photo.attach(io: File.open('app/assets/images/seed_images/3_2.jpeg'), filename: '3_2.jpeg')
 a.save!
 
