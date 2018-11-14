@@ -37,7 +37,7 @@ create_table "likes", force: :cascade do |t|
 end
 ```
 
-This method brings up a performance issue in the frontend. Given this normalized Redux state, how can you tell if a user liked a post (quickly)? The naive approach would be to traverse all the "likes" records and check each likes record for the corresponding post and see if the user matches the current user. This is tedious and time consuming.
+This method brings up a performance issue in the frontend. Given this normalized Redux state, how can you tell if a user liked a post (quickly)? The naive approach would be to traverse all the `likes` and check each one for the matching post and user. This is tedious and time consuming.
 
 I devised a denormalized approach for the Redux store and nested the likes data (called likers) under each post as shown below:
 
@@ -62,7 +62,7 @@ On the topic of unliking a post, I created a custom BE API endpoint to handle un
 delete 'api/likes/:post_id', to: 'api/likes#destroy', defaults: {format: :json}
 ```
 
-Instead of looking up the like record to delete by the `like` id. The FE will send a delete request with the associated post_id. In combination with user auth session, the BE will determine the current user and and find the associated like record by post id.
+Instead of looking up the like record to delete by the `like` id. The FE will send a delete request with the associated `post_id`. In combination with user auth session, the BE will determine the current user and and find the associated like record by requested `post_id` parameter.
 ___
 ### Reusable Modular React Components
 
