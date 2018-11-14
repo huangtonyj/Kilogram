@@ -90,6 +90,7 @@ class UserShow extends React.Component {
 
         <UserShowPostIndex
           posts={this.props.posts}
+          getPost={this.props.getPost}
           openModal={this.props.openModal}
           closeModal={this.props.closeModal}
         />

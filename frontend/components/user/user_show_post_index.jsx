@@ -12,16 +12,17 @@ class UserShowPostIndex extends React.Component {
 
   render() {
 
-    const userShowPostIndexItem = (
-      this.props.posts.map((post) =>
+    const userShowPostIndexItem = this.props.posts
+      .map(post => (
         <UserShowPostIndexItem
           key={post.id}
           post={post}
+          getPost={this.props.getPost}
           openModal={this.props.openModal}
           closeModal={this.props.closeModal}
         />
-      ).reverse()
-    );
+      ))
+      .reverse();
 
     return (
       <div className='user-show-profile-posts'>
