@@ -1,9 +1,9 @@
 # Kilogram
-
-[Live Link](https://kil0gram.herokuapp.com/#/signin)
 ___
-[Kilogram](https://kil0gram.herokuapp.com/#/signin) is a full stack, single page applicatin clone of Instagram. Users of Kilogram will be able to interact with many of the following core features found on Instagram.
+[Live Link](https://kil0gram.herokuapp.com/#/signin)
 
+[Kilogram](https://kil0gram.herokuapp.com/#/signin) is a full stack, single page applicatin clone of Instagram. Users of Kilogram will be able to interact with many of the following core features.
+___
 ## Features
   * Sign up/in with username and password or demo account
   * Share images by uploading to AWS S3
@@ -26,7 +26,7 @@ ___
 ## Feature Challenges/Highlights
 ### Liking and Unliking a Post
 
-Liking a post seems like a trivial matter but it is one of the core way of expression on Kilogram. The incorrect way to build likes feature is to simply nest a likes counter in the associated posts record. This would not prevent users from liking a post multiple times, thus an indicator of some sort is needed, and the `likes` table is migrated.
+Liking a post seems like a trivial matter but it is one of the core way to express on Kilogram. The incorrect way to build `likes` is to simply nest a likes counter in the associated posts record. This would not prevent users from liking a post multiple times, thus an indicator of some sort is needed, and the `likes` table is migrated.
 
 ```ruby
 create_table "likes", force: :cascade do |t|
@@ -69,9 +69,10 @@ ___
 In Kilogram, there were many similar components used in the post index and post show page. I have highlighted with corresponding color below.
 
 ![alt text](app/assets/images/post_index.png "Post Index")
+
 ![alt text](app/assets/images/post_show.png "Post Sndex")
 
-To take full advantage of React, I simplified my codebase and reused these components.
+To take full advantage of React, I simplified my codebase by reusing these components in both places.
 
 ```jsx
 return (
