@@ -70,7 +70,7 @@ In Kilogram, there were many similar components used in the post index and post 
 
 ![alt text](app/assets/images/post_index.png "Post Index")
 
-![alt text](app/assets/images/post_show.png "Post Sndex")
+![alt text](app/assets/images/post_show.png "Post Index")
 
 To take full advantage of React, I simplified my codebase by reusing these components in both places.
 
