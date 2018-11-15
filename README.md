@@ -3,7 +3,9 @@ ___
 [Live Link](https://kil0gram.herokuapp.com/#/signin)
 
 [Kilogram](https://kil0gram.herokuapp.com/#/signin) is a full stack, single page applicatin clone of Instagram. Users of Kilogram will be able to interact with many of the following core features.
-___
+
+![Kilogram Intro GIF](app/assets/images/kilogram.gif "Kilogram Intro GIF")
+
 ## Features
   * Sign up/in with username and password or demo account
   * Share images by uploading to AWS S3
