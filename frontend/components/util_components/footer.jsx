@@ -9,7 +9,7 @@ const Footer = () => (
           <i className="far fa-id-card" />
         </a>
 
-        <a href="https://www.linkedin.com/in/tonyjhuang/" target="_blank">
+        <a href="https://www.linkedin.com/in/HuangTonyJ/" target="_blank">
           <i className="fab fa-linkedin" />
         </a>
 
