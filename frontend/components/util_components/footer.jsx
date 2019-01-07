@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => (
   <div className="footer">
     <div className="get-the-app-container">
-      <p>Lets, GET IN TOUCH!</p>
+      <p>GET IN TOUCH!</p>
       <div>
         <a href="https://www.huangtonyj.com" target="_blank">
           <i className="far fa-id-card" />
