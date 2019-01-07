@@ -5,6 +5,7 @@ import { ajaxPostGet } from "../../actions/post_actions";
 import { ajaxFollowPost, ajaxFollowDelete } from '../../actions/follow_actions';
 import UserShow from './user_show';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { ajaxSessionDelete } from "../../actions/session_actions";
 
 const mapStateToProps = (state, ownProps) => {
 
@@ -29,6 +30,8 @@ const mapDispatchToProps = dispatch => {
 
     openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
+
+    signOut: () => dispatch(ajaxSessionDelete()),
   });
 };
 

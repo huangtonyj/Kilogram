@@ -46,6 +46,7 @@ class UserShow extends React.Component {
         >
           Unfollow
         </button>
+        
       ) : (
           <button
             onClick={this.handleFollow}
@@ -55,47 +56,67 @@ class UserShow extends React.Component {
         )
     );
 
-    return (
-      <div className='user-show-profile'>
-        <div className='user-show-profile-header'>
+    let signOutButton = (
+      this.props.currentUser.id == this.props.match.params.userId ? <i onClick={this.props.signOut} className="fas fa-sign-out-alt" /> : <span></span>
+    );
 
-          <div className='user-show-avatar-container'>
+    return <div className="user-show-profile">
+        <div className="user-show-profile-header">
+          <div className="user-show-avatar-container">
             {/* <div className='user-show-avatar'> */}
-              <i id="user-show-avatar" className="far fa-user" />
+            <i id="user-show-avatar" className="far fa-user" />
             {/* </div> */}
           </div>
 
-          <div className='user-show-profile-info'>
-            <div className='user-show-profile-info-A'>
-              <p className='user-show-username'>{this.props.user.username}</p>
+          <div className="user-show-profile-info">
+            <div className="user-show-profile-info-A">
+              <p className="user-show-username">
+                {this.props.user.username}
+              </p>
 
               {followButton}
-
+              {signOutButton}
             </div>
 
-            <div className='user-show-profile-info-B'>
-              <span><b>{Object.values(this.props.posts).filter((post) => post.authorId == this.props.match.params.userId).length}</b> posts</span>
-              <span><b>{Object.values(this.props.user.followers).filter(Boolean).length}</b> followers</span>
-              <span><b>{Object.values(this.props.user.followees).filter(Boolean).length}</b> following</span>
+            <div className="user-show-profile-info-B">
+              <span>
+                <b>
+                  {
+                    Object.values(this.props.posts).filter(
+                      post =>
+                        post.authorId == this.props.match.params.userId
+                    ).length
+                  }
+                </b> posts
+              </span>
+              <span>
+                <b>
+                  {
+                    Object.values(this.props.user.followers).filter(Boolean)
+                      .length
+                  }
+                </b> followers
+              </span>
+              <span>
+                <b>
+                  {
+                    Object.values(this.props.user.followees).filter(Boolean)
+                      .length
+                  }
+                </b> following
+              </span>
             </div>
 
-            <div className='user-show-profile-info-C'>
-              <p>{this.props.user.fullname}</p><br />
+            <div className="user-show-profile-info-C">
+              <p>{this.props.user.fullname}</p>
+              <br />
               <p>{this.props.user.description}</p>
             </div>
-
-
           </div>
         </div>
 
-        <UserShowPostIndex
-          posts={this.props.posts}
-          getPost={this.props.getPost}
-          openModal={this.props.openModal}
-          closeModal={this.props.closeModal}
-        />
-      </div>
-    );
+        <UserShowPostIndex posts={this.props.posts} getPost={this.props.getPost} openModal={this.props.openModal} closeModal={this.props.closeModal} />
+      </div>;
   }
 }
 
